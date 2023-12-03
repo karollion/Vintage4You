@@ -8,29 +8,27 @@ exports.register = async (req, res) => {
   try{
     const { login, password, phone } = req.body;
     const fileType = req.file ? await getImageFileType(req.file) : 'unknown';
-    console.log(login, password, phone, req.file.filename)
-    phone = Number(phone);
-    login = escape(login);
+    phoneNumber = Number(phone);
+    loginSec = escape(login);
     const avatar = req.file.filename;
 
-    if(login && 
-      typeof login === 'string' && 
+    if(loginSec && 
+      typeof loginSec === 'string' && 
       password && 
       typeof password === 'string' && 
       req.file && 
       ['image/png', 'image/jpeg', 'image/gif'].includes(fileType) && 
-      typeof phone === 'number' && 
-      req.file.size <= 1048576) 
-      {
-      const userWithLogin = await User.findOne({ login });
+      typeof phoneNumber === 'number' && 
+      req.file.size <= 1048576) {
+    
+      const userWithLogin = await User.findOne({ loginSec });
       if (userWithLogin) {
         // delete photo from uploads folder
 				const path = `public/uploads/${avatar}`
 				fs.unlinkSync(path)
         return res.status(409).send({ message: 'User with this login alredy exist' });
       }
-
-      const user = await User.create({ login, password: await bcrypt.hash(password, 10), avatar: avatar, phone: phone });
+      const user = await User.create({ login: loginSec, password: await bcrypt.hash(password, 10), avatar: avatar, phone: phoneNumber });
       res.status(201).send({ message: 'User created' + user.login })
     } else {
       // delete photo from uploads folder

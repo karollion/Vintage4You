@@ -15,8 +15,8 @@ const SearchForm = () => {
   };
   
   return (
-    <Form onSubmit={validate(handleSubmit)} className="d-flex justify-content-center">
-      <Row className="w-25">
+    <Form onSubmit={validate(handleSubmit)} className="d-flex justify-content-end">
+      <Row className="">
         <Col>
           <Form.Group className="mb-3" controlId="formSearchPhase">
             <Form.Control

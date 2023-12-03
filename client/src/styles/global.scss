@@ -1,5 +1,6 @@
 @import './settings.scss';
 
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -7,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: $color-dark;
+  background: $color-light;
   font-family: $font-text;
   font-size: ($base-size * 1.1);
   color: $color-light;
