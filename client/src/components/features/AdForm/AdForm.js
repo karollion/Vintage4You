@@ -50,9 +50,9 @@ const AdForm = ({ action, actionText, ...props }) => {
         <Form.Label>Picture</Form.Label>
         <Form.Control
           {...register("picture", { required: true })}
-          value={picture}
-          onChange={e => setPicture(e.target.value)}
-          type='text' placeholder='Chose picture'
+          
+          onChange={e => setPicture(e.target.files[0])}
+          type='file'
         />
         {errors.picture && <small className="d-block form-text text-danger mt-2">Picture can't be empty</small>}
       </Form.Group>

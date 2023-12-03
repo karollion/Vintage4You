@@ -45,19 +45,20 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
   try{
     const { login, password} = req.body;
+
     if(login && typeof login === 'string' && password && typeof password === 'string') {
       const user = await User.findOne({ login });
+
       if (!user) {
-        res.status(400).send({ message: 'User or password are incorrect' });
+        return res.status(400).send({ message: 'User or password are incorrect' });
       } else {
         if (bcrypt.compareSync(password, user.password)) {
+          const userLogged = { login: user.login, id: user._id, avatar: user.avatar};
+          req.session.user = userLogged;
 
-          const userLogged = { login: user.login, id: user._id};
-          req.session = userLogged;
-
-          res.status(200).send({ message: 'Login successful'});
+          res.status(200).send({user: req.session.user});
         } else {
-          res.status(400).send({ message: 'User or password are incorrect' });
+          res.status(401).send({ message: 'User or password are incorrect' });
         }
       }
 
@@ -71,7 +72,7 @@ exports.login = async (req, res) => {
 };
 
 exports.getUser = async (req, res) => {
-    res.send({ message: 'You are login', login: req.session.login });
+    res.send({ message: 'You are login', user: req.session });
 };
 
 exports.logout = async (req, res) => {

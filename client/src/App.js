@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { isUserLoginedIn } from './redux/usersRedux';
+//import { isUserLoginedIn } from './redux/usersRedux';
 import { fetchAds } from './redux/adsRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -21,7 +21,7 @@ import WrongPage from './components/pages/WrongPage/WrongPage';
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(isUserLoginedIn()), [dispatch]);
+  //useEffect(() => dispatch(isUserLoginedIn()), [dispatch]);
   useEffect(() => dispatch(fetchAds()), [dispatch]);
 
   return (

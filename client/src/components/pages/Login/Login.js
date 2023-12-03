@@ -30,6 +30,7 @@ const Login = () => {
       .then(res => {
         if(res.status === 200) {
           setStatus('success');
+          console.log(res.user)
           dispatch(logIn({ login }));
           setTimeout(() => { navigate('/') }, 500);
         } else if (res.status === 400) {

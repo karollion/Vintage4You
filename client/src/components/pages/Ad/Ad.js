@@ -10,6 +10,7 @@ import { IMGS_URL } from '../../../config';
 const Ad = () => {
   const user = useSelector(getUser);
 
+  console.log(user)
   const  {id}  = useParams();
   const ad = useSelector(state => getAdById(state, id));
 
@@ -29,11 +30,24 @@ const Ad = () => {
         <Col xs='12' md='6' lg='6' className='p-3'>
           <h3>{ad.title}</h3>
           <p>{ad.date}</p>
-          <p>{ad.price}</p>
+          <p>{ad.price}zł</p>
           <p>{ad.location}</p>
-          <p>{ad.seller}</p>
           <p>{ad.content}</p>
-          {user === ad.seller && (
+          <Row>
+            <Col>
+              <p>{ad.seller}</p>
+            </Col>
+            <Col>
+            obrazek
+              {/* <div className={styles.imageUser}>
+                <img 
+                  className={styles.image}
+                  alt={ad.title}
+                  src={ IMGS_URL + user.avatar } />
+              </div> */}
+            </Col>
+          </Row>
+          {user.login === ad.seller && (
           <Row className="d-flex justify-content-center">
             <Col>
               <Button className="w-100 p-3" variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>
