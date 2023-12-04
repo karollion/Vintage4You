@@ -21,7 +21,7 @@ const EditAdForm = () => {
   };
   
   if (!adData) return <Navigate to="/" />;
-  if (user === adData.seller) return <Navigate to="/" />;
+  if (user.user.id === adData.user) return <Navigate to="/" />;
   
   return (
     <AdForm
@@ -33,7 +33,7 @@ const EditAdForm = () => {
       picture={adData.picture}
       price={adData.price}
       location={adData.location}
-      seller={adData.seller}
+      user={adData.user}
       pageTitle={title}
     />
   );

@@ -1,7 +1,7 @@
 import { API_URL } from '../config'
 
 //selectors
-export const getUser = ({ user }) => user;
+export const getUser = ({ user }) =>  user;
 
 // actions
 const createActionName = actionName => `app/users/${actionName}`;

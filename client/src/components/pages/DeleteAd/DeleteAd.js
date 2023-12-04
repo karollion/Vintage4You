@@ -20,7 +20,7 @@ const DeleteAd = () => {
   };
 
   if (!ad) return <Navigate to="/" />;
-  if (user === ad.seller) return <Navigate to="/" />;
+  if (user.user.id === ad.user) return <Navigate to="/" />;
 
   return (
     <div className='col-12 col-sm-3 mx-auto min-vh-100'>

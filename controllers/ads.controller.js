@@ -30,7 +30,7 @@ exports.getOne = async (req, res) => {
 exports.postOne = async (req, res) => {
   
   try {
-    let { title, content, date, price, location, seller } = req.body;
+    let { title, content, date, price, location, user } = req.body;
     
     title = escape(title);
 		content = escape(content);
@@ -39,7 +39,7 @@ exports.postOne = async (req, res) => {
 		let picture = req.file.filename;
 		let fileType = req.file ? await getImageFileType(req.file) : 'unknokwn'
     
-    if (validateAds(title, content, date, location, seller, price, fileType)) {
+    if (validateAds(title, content, date, location, user, price, fileType)) {
 			{
 				const newAds = new Ads({ 
           title: title, 
@@ -48,7 +48,7 @@ exports.postOne = async (req, res) => {
           picture: picture, 
           price: price, 
           location: location, 
-          seller: seller });
+          user: user });
 
         await newAds.save();
         res.send( newAds );
@@ -67,12 +67,12 @@ exports.postOne = async (req, res) => {
 // Edit one Ad by id
 exports.putOne = async (req, res) => {
   try {
-    let { title, content, date, picture, price, location, seller } = req.body;
+    let { title, content, date, picture, price, location, user } = req.body;
     title = escape(title);
 		text = escape(text);
 		location = escape(location);
 
-    let uploadData = { title, content, date, price, location, seller }
+    let uploadData = { title, content, date, price, location, user }
 
 		const wasFileUplaoded = req.file ? true : false
 
@@ -82,7 +82,7 @@ exports.putOne = async (req, res) => {
 		const fileType = req.file ? await getImageFileType(req.file) : 'unknown'
 		const id = req.params.id
 
-		const ad = await Ads.findById(id).populate('seller')
+		const ad = await Ads.findById(id).populate('user')
 
 		// Delete the old image
 		if (wasFileUplaoded) {
@@ -129,7 +129,7 @@ exports.searchAll = async (req, res) => {
 				{ content: { $regex: searchParams, $options: 'i' } },
 				{ location: { $regex: searchParams, $options: 'i' } },
 			],
-		}).populate('seller')
+		}).populate('user')
     
     if(!searchAds) res.status(404).json({ message: 'Not found' });
     else res.json(searchAds);

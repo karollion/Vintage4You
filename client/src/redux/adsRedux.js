@@ -55,7 +55,7 @@ export const addAdRequest = ad => {
 		fd.append('picture', ad.picture)
 		fd.append('price', ad.price)
 		fd.append('location', ad.location)
-		fd.append('seller', ad.seller)
+		fd.append('user', ad.user)
 
     const options = {
       method: 'POST',

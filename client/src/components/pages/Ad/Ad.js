@@ -12,7 +12,7 @@ const Ad = () => {
 
   const  {id}  = useParams();
   const ad = useSelector(state => getAdById(state, id));
-
+  console.log(ad)
   if (!ad) return <Navigate to="/" />;
   return (
     <div className='min-vh-100 px-4'>
@@ -28,24 +28,25 @@ const Ad = () => {
         </Col>
         <Col xs='12' md='6' lg='6' className='p-3'>
           <h3>{ad.title}</h3>
-          <p>{ad.date}</p>
-          <p>{ad.price}zł</p>
-          <p>{ad.location}</p>
+          <p><b>Published date / last edited: </b> {ad.date.substring(0, 10)}</p>
+          <p><b>Price: </b>{ad.price}zł</p>
+          <p><b>Location: </b>{ad.location}</p>
+          <p><b>Ad content: </b></p>
           <p>{ad.content}</p>
           <Row>
             <Col>
-              <p>{ad.seller}</p>
+              <p><b>Seller: </b>{ad.user}</p>
             </Col>
             <Col>
-              <div className={styles.imageUser}>
+              {/* <div className={styles.imageUser}>
                 <img 
                   className={styles.image}
-                  alt={user.user.login + ' picture'}
-                  src={ IMGS_URL + user.user.avatar } />
-              </div>
+                  alt={ad.user.login + ' picture'}
+                  src={ IMGS_URL + ad.user.avatar } />
+              </div> */}
             </Col>
           </Row>
-          {user.user.login === ad.seller && (
+          {user && user.user.id === ad.user && (
           <Row className="d-flex justify-content-center">
             <Col>
               <Button className="w-100 p-3" variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>

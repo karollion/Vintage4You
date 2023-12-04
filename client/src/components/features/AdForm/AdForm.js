@@ -9,14 +9,14 @@ const AdForm = ({ action, actionText, ...props }) => {
   const [picture, setPicture] = useState(props.picture || '');
   const [price, setPrice] = useState(props.price || '');
   const [location, setLocation] = useState(props.location || '');
-  const [seller] = useState(props.seller);
+  const [user] = useState(props.user);
 
   const { register, handleSubmit: validate, formState: { errors } } = useForm();
   
   const handleSubmit = () => {
     
     if(content ) {
-      action({ title, content, picture, price, location, seller });
+      action({ title, content, picture, price, location, user });
     }
   };
   
