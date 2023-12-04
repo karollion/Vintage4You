@@ -47,19 +47,25 @@ export const updateAdRequest = ( ad ) => {
 
 export const addAdRequest = ad => {
   return(dispatch) => {
+
+    const fd = new FormData()
+		fd.append('title', ad.title)
+		fd.append('content', ad.content)
+		fd.append('date', ad.date)
+		fd.append('picture', ad.picture)
+		fd.append('price', ad.price)
+		fd.append('location', ad.location)
+		fd.append('seller', ad.seller)
+
     const options = {
       method: 'POST',
       credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    
-      body: JSON.stringify( ad )
+      body: fd
     };
     
     fetch(`${API_URL}/ads`, options)
-      .then(() => {dispatch(addAd(ad))})
       .then(() => {dispatch(fetchAds())})
+      .catch((err) => console.log(err))
   };
 };
 

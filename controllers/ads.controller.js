@@ -28,14 +28,16 @@ exports.getOne = async (req, res) => {
 
 // Add one new Ad
 exports.postOne = async (req, res) => {
+  
   try {
     let { title, content, date, price, location, seller } = req.body;
+    
     title = escape(title);
 		content = escape(content);
 		price = Number(price)
 		location = escape(location);
-		const picture = req.file.filename;
-		const fileType = req.file ? await getImageFileType(req.file) : 'unknokwn'
+		let picture = req.file.filename;
+		let fileType = req.file ? await getImageFileType(req.file) : 'unknokwn'
     
     if (validateAds(title, content, date, location, seller, price, fileType)) {
 			{
@@ -47,6 +49,7 @@ exports.postOne = async (req, res) => {
           price: price, 
           location: location, 
           seller: seller });
+
         await newAds.save();
         res.send( newAds );
 			}

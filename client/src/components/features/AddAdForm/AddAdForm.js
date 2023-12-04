@@ -11,18 +11,20 @@ const AddAdForm = () => {
 
   function getDate() {
     const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const day = today.getDate();
-    const hour = today.getHours();
-    const min = today.getMinutes();
-    return `${hour}:${min} ${day}-${month}-${year}`;
+    // const year = today.getFullYear();
+    // const month = today.getMonth() + 1;
+    // const day = today.getDate();
+    // const hour = today.getHours();
+    // const min = today.getMinutes();
+    return today;
   }
 
   const title = 'Add ad'
   
   const handleSubmit = ad => {
-    ad.date = getDate()
+    ad.date = getDate();
+    ad.seller = user.user.login;
+    console.log(ad)
     dispatch(addAdRequest(ad));
     navigate('/');
   };

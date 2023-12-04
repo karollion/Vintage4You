@@ -1,9 +1,6 @@
 
-.imageBox {
+.img {
   width: 100%;
   height: 200px;
-
-  img {
-    object-fit: cover;
-  }
+  object-fit: contain;
 }

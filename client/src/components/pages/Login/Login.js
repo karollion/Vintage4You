@@ -27,17 +27,20 @@ const Login = () => {
 
     setStatus('loading');
     fetch(`${API_URL}/auth/login`, options)
+      
       .then(res => {
         if(res.status === 200) {
           setStatus('success');
-          console.log(res.user)
-          dispatch(logIn({ login }));
-          setTimeout(() => { navigate('/') }, 500);
+          return res.json();
         } else if (res.status === 400) {
           setStatus('clientError');
         } else {
           setStatus('serverError');
         }
+      })
+      .then(user => {
+        dispatch(logIn({ user }));
+        setTimeout(() => { navigate('/') }, 500);
       })
       .catch(err => {
         setStatus('serverError');

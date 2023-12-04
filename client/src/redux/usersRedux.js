@@ -16,6 +16,7 @@ export const isUserLoginedIn = () => {
   return(dispatch) => {
     
     fetch(`${API_URL}/auth/user`)
+    .then(res => res.json())
       .then(res => {
         if(res.status === 200) {
           dispatch(logIn( res.user ));

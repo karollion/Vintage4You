@@ -12,7 +12,7 @@ const DeleteAd = () => {
   const  {id}  = useParams();
   const ad = useSelector(state => getAdById(state, id));
   const user = useSelector(getUser);
-
+  
   const handleAction = e => {
     e.preventDefault();
     dispatch(removeAdRequest(id));
