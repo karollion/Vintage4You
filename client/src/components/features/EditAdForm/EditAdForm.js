@@ -21,6 +21,8 @@ const EditAdForm = () => {
 
   const handleSubmit = ad => {
     ad.date = getDate();
+    ad.user = adData.user._id;
+    console.log(ad)
     dispatch(updateAdRequest(ad));
     navigate('/');
   };
