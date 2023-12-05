@@ -10,7 +10,10 @@ Fullstack application with advertisements for selling things.
 Includes a user registration and login system.
 Users who are not logged in can view all advertisements. Only logged-in users can edit or delete their advertisements
 
+Project page: [Ads Board](https://adsboard.karollion.repl.co/)
+
 To start the project use the command: `yarn start`
+
 To start tests use command: `yarn test`
 
 Server run on `localhost:3030`
