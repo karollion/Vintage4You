@@ -7,7 +7,7 @@ const validateAds = require('../utils/validateAds');
 // Load all ads
 exports.getAll = async (req, res) => {
   try {
-    res.json(await Ads.find());
+    res.json(await Ads.find().populate('user'));
   }
   catch(err) {
     res.status(500).json({ message: err });
@@ -17,7 +17,7 @@ exports.getAll = async (req, res) => {
 // Find one ad by id
 exports.getOne = async (req, res) => {
   try {
-    const searchAds = await Ads.findById(req.params.id);
+    const searchAds = await Ads.findById(req.params.id).populate('user');
     if(!searchAds) res.status(404).json({ message: 'Not found' });
     else res.json(searchAds);
   }
@@ -67,9 +67,9 @@ exports.postOne = async (req, res) => {
 // Edit one Ad by id
 exports.putOne = async (req, res) => {
   try {
-    let { title, content, date, picture, price, location, user } = req.body;
+    let { title, content, date, price, location, user } = req.body;
     title = escape(title);
-		text = escape(text);
+		content = escape(content);
 		location = escape(location);
 
     let uploadData = { title, content, date, price, location, user }
@@ -81,16 +81,14 @@ exports.putOne = async (req, res) => {
 		}
 		const fileType = req.file ? await getImageFileType(req.file) : 'unknown'
 		const id = req.params.id
-
 		const ad = await Ads.findById(id).populate('user')
-
 		// Delete the old image
 		if (wasFileUplaoded) {
 			const path = `public/uploads/${ad.picture}`
 			fs.unlinkSync(path)
 		}
 		// change ad if data validated
-		if (ad && validateAds(title, text, date, location, user, price, fileType)) {
+		if (ad && validateAds(title, content, date, location, user, price, fileType)) {
 			await ad.updateOne({ $set: { ...uploadData } })
 			res.send({ message: 'Ad changed' })
 		} else res.status(500).json('validation failed')
@@ -125,9 +123,9 @@ exports.searchAll = async (req, res) => {
 
     const searchAds = await Ads.find({
 			$or: [
-				{ title: { $regex: searchParams, $options: 'i' } },
-				{ content: { $regex: searchParams, $options: 'i' } },
-				{ location: { $regex: searchParams, $options: 'i' } },
+				{ title: { $regex: searchPhase, $options: 'i' } },
+				{ content: { $regex: searchPhase, $options: 'i' } },
+				{ location: { $regex: searchPhase, $options: 'i' } },
 			],
 		}).populate('user')
     

@@ -5,7 +5,7 @@ const connectToDB = require('./db');
 const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const helmet = require('helmet');
 
 // import routes
@@ -13,7 +13,7 @@ const adsRoutes = require('./routes/ads.routes');
 const authRoutes = require('./routes/auth.routes');
 
 const app = express();
-app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }))
 
 const server = app.listen(process.env.PORT || 3030, () => {
 	console.log('Server is running on port: 3030');

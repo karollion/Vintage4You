@@ -24,7 +24,7 @@ const AddAdForm = () => {
   const handleSubmit = ad => {
     ad.date = getDate();
     ad.user = user.user.id;
-    console.log(ad)
+    
     dispatch(addAdRequest(ad));
     navigate('/');
   };

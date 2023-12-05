@@ -10,6 +10,7 @@ const DeleteAd = () => {
   const navigate = useNavigate();
 
   const  {id}  = useParams();
+
   const ad = useSelector(state => getAdById(state, id));
   const user = useSelector(getUser);
   
@@ -20,7 +21,7 @@ const DeleteAd = () => {
   };
 
   if (!ad) return <Navigate to="/" />;
-  if (user.user.id === ad.user) return <Navigate to="/" />;
+  if (user.user.id !== ad.user._id) return <Navigate to="/" />;
 
   return (
     <div className='col-12 col-sm-3 mx-auto min-vh-100'>

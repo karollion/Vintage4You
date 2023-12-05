@@ -12,4 +12,16 @@
   .linkActive {
     color: $color-active;
   }
+
+  .avatarBox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-active;
+    border-radius: 3px;
+    box-shadow: 0 0 5px pink;
+    background: $color-light;
+  }
+  .avatar {
+    object-fit: cover;
+  }
 }

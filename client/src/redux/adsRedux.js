@@ -30,18 +30,26 @@ export const fetchAds = () => {
 };
 
 export const updateAdRequest = ( ad ) => {
+  console.log(ad)
   return(dispatch) => {
+    const fd = new FormData()
+		fd.append('title', ad.title)
+		fd.append('content', ad.content)
+		fd.append('date', ad.date)
+		fd.append('picture', ad.picture)
+		fd.append('price', ad.price)
+		fd.append('location', ad.location)
+		fd.append('user', ad.user)
+
     const options = {
       method: 'PUT',
       credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ...ad }),
+      body: fd
     };
     
     fetch(`${API_URL}/ads/${ad._id}`, options)
-      .then(() => {dispatch(updateAd(ad, ad._id))});
+      //.then(() => {dispatch(updateAd(ad, ad.id))})
+      .then(() => {dispatch(fetchAds())})
   };
 };
 

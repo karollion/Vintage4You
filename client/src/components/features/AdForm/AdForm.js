@@ -12,9 +12,8 @@ const AdForm = ({ action, actionText, ...props }) => {
   const [user] = useState(props.user);
 
   const { register, handleSubmit: validate, formState: { errors } } = useForm();
-  
+
   const handleSubmit = () => {
-    
     if(content ) {
       action({ title, content, picture, price, location, user });
     }
@@ -49,7 +48,7 @@ const AdForm = ({ action, actionText, ...props }) => {
       <Form.Group  controlId="formpicture">
         <Form.Label>Picture</Form.Label>
         <Form.Control
-          {...register("picture", { required: true })}
+          {...register("picture", { required: false })}
           
           onChange={e => setPicture(e.target.files[0])}
           type='file'

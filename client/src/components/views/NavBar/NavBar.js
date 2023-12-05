@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getUser } from '../../../redux/usersRedux';
+import { IMGS_URL } from '../../../config';
 
 const NavBar = () => {
   const user = useSelector(getUser);
@@ -23,6 +24,10 @@ const NavBar = () => {
                 {!user ? (<NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} as={NavLink} to="/signup">Sign up</NavLink>) : null }
                 {user ? (<NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} as={NavLink} to="/logout">Logout</NavLink>) : null }
               </Nav>
+              {user &&  (
+              <div className={styles.avatarBox}>
+                <img src={IMGS_URL + user.user.avatar} className={styles.avatar} alt='avatar'></img>
+              </div>)}
             </Navbar.Collapse>
         </Navbar>
       </Container> 

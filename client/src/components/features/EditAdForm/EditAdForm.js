@@ -13,9 +13,14 @@ const EditAdForm = () => {
   const  {id}  = useParams();
   const adData = useSelector(state => getAdById(state, id));
 
+  function getDate() {
+    const today = new Date();
+    return today;
+  }
   const title = 'Edit ad'
 
   const handleSubmit = ad => {
+    ad.date = getDate();
     dispatch(updateAdRequest(ad));
     navigate('/');
   };
@@ -29,7 +34,6 @@ const EditAdForm = () => {
       actionText='Edit ad' 
       title={adData.title}
       content={adData.content}
-      date={adData.date}
       picture={adData.picture}
       price={adData.price}
       location={adData.location}
