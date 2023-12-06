@@ -23,7 +23,7 @@ const Ad = () => {
         <Card.Body>
           <Card.Title><h3>{ad.title}</h3></Card.Title>
           <Card.Text>
-            <b>Price:</b> ${ad.price}
+            <b>Price:</b> $ {ad.price}
           </Card.Text>
 
           <Card.Text>
@@ -34,7 +34,7 @@ const Ad = () => {
           </Card.Text>
 
           <Card.Text>
-            <b>Seller:</b>{ad.user.login}
+            <b>Seller: </b>{ad.user.login}
             <img src={IMGS_URL + ad.user.avatar} className={styles.avatar} alt='user avatar'></img> 
           </Card.Text>
 
