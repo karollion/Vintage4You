@@ -30,7 +30,6 @@ export const fetchAds = () => {
 };
 
 export const updateAdRequest = ( ad ) => {
-  console.log(ad)
   return(dispatch) => {
     const fd = new FormData()
 		fd.append('title', ad.title)
@@ -46,7 +45,6 @@ export const updateAdRequest = ( ad ) => {
       credentials: 'include',
       body: fd
     };
-    console.log('update ', ad)
     fetch(`${API_URL}/ads/${ad._id}`, options)
       //.then(() => {dispatch(updateAd(ad, ad.id))})
       .then(() => {dispatch(fetchAds())})

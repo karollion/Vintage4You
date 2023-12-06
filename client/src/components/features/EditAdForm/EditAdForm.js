@@ -19,8 +19,6 @@ const EditAdForm = () => {
     ad.date = new Date();
     ad.user = adData.user._id;
     ad._id = adData._id;
-    console.log('Dataaaaaaaaa', adData)
-    //console.log(ad)
     dispatch(updateAdRequest(ad));
     navigate('/');
   };
