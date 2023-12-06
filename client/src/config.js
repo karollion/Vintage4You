@@ -4,4 +4,4 @@ export const API_URL = process.env.NODE_ENV === 'production'
 
   export const IMGS_URL = (process.env.NODE_ENV === 'production') 
   ? '/api/uploads/' 
-  : 'http://localhost:3030/api/uploads/';
+  : 'http://localhost:3030/uploads/';

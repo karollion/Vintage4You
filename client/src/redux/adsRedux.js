@@ -46,7 +46,7 @@ export const updateAdRequest = ( ad ) => {
       credentials: 'include',
       body: fd
     };
-    
+    console.log('update ', ad)
     fetch(`${API_URL}/ads/${ad._id}`, options)
       //.then(() => {dispatch(updateAd(ad, ad.id))})
       .then(() => {dispatch(fetchAds())})

@@ -13,16 +13,14 @@ const EditAdForm = () => {
   const  {id}  = useParams();
   const adData = useSelector(state => getAdById(state, id));
 
-  function getDate() {
-    const today = new Date();
-    return today;
-  }
   const title = 'Edit ad'
 
   const handleSubmit = ad => {
-    ad.date = getDate();
+    ad.date = new Date();
     ad.user = adData.user._id;
-    console.log(ad)
+    ad._id = adData._id;
+    console.log('Dataaaaaaaaa', adData)
+    //console.log(ad)
     dispatch(updateAdRequest(ad));
     navigate('/');
   };
