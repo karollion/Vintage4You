@@ -13,8 +13,8 @@ const NavBar = () => {
   return (
     <div className={styles.root}>
       <Container>
-        <Navbar variant="dark" expand="lg" className='mb-4'>
-            <Navbar.Brand className={styles.logo} as={NavLink} to="/"> Ads Board </Navbar.Brand>
+        <Navbar variant="dark" expand="lg" className=''>
+            <Navbar.Brand className={styles.logo} as={NavLink} to="/">Vintage4You</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">

@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { fetchAds } from './redux/adsRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Container from './components/common/container/Container';
 import NavBar from './components/views/NavBar/NavBar';
 import Footer from './components/views/Footer/Footer';
 
@@ -27,7 +26,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Container>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/ad/:id" element={<Ad/>} />
@@ -40,7 +38,6 @@ function App() {
           <Route path="/logout" element={<Logout/>} />
           <Route path="*" element={<WrongPage/>} />
         </Routes>
-      </Container>
       <Footer />
     </div>
   );

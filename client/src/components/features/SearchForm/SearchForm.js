@@ -1,6 +1,8 @@
-import { Form, Button, Row, Col } from "react-bootstrap";
+import styles from './SearchForm.module.scss';
+import { Form, Button} from "react-bootstrap";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Container from '../../common/container/Container';
 
 const SearchForm = () => {
   const navigate = useNavigate();
@@ -14,24 +16,24 @@ const SearchForm = () => {
   };
   
   return (
-    <Form onSubmit={handleSubmit} className="d-flex justify-content-end">
-      <Row className="">
-        <Col>
-          <Form.Group className="mb-3" controlId="formSearchPhase">
-            <Form.Control
-              value={searchPhase}
-              onChange={e => setSearchPhase(e.target.value)}
-              type='search' placeholder='Search ad'
-            />
-          </Form.Group>
-        </Col>
-        <Col>
+    <div className={styles.root}>
+      <Container>
+        <Form onSubmit={handleSubmit} className={styles.form}>
+
+          <input
+            className="form-control"
+            value={searchPhase}
+            onChange={(e) => setSearchPhase(e.target.value)}
+            type="search"
+            placeholder="Search ad"
+          />
+          
           <Button variant="primary" type="submit">
             Search
           </Button>
-        </Col>
-      </Row>
-    </Form>
+        </Form>
+      </Container>
+    </div>
   );
 };
 
