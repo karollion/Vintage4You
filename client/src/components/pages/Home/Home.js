@@ -17,7 +17,7 @@ const Home = () => {
       <SearchForm />
       <Container>
         <div className={styles.content}>
-          <Title>All Ads</Title>
+          <Title>All ads</Title>
           {ads.length === 0 && !isLoading && <p>No advertisements</p>}
           {isLoading && <Spinner animation='border' variant='primary' />}
           {!isLoading && <AllAds />}
