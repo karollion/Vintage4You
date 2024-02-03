@@ -1,7 +1,8 @@
+@import '../../../styles/settings.scss';
 
 .root {
   width: 100%;
-  background: cadetblue;
+  background: $searchbar-bg-color;
   padding: 10px;
   
   .form {

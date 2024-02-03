@@ -1,0 +1,9 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  min-height: 100vh;
+
+  .content {
+    padding: 10px;
+  }
+}
