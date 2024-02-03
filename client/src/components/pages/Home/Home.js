@@ -1,6 +1,6 @@
 //import styles from './Home.module.scss';
 import { useSelector } from 'react-redux';
-import { Spinner, Row, Col, Button } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import { getIsLoading } from '../../../redux/isLoadingRedux';
 import { getAllAds } from '../../../redux/adsRedux';
 import SearchForm from '../../features/SearchForm/SearchForm';
@@ -12,14 +12,8 @@ const Home = () => {
 
   return (
     <div className='min-vh-100'>
-      <Row className="">
-        <Col>
-          <h2 className='my-4' >All Advertisements</h2>
-        </Col>
-        <Col>
-          <SearchForm />
-        </Col>
-      </Row>
+      <SearchForm />
+      <h2 className='my-4' >All Advertisements</h2>
       {ads.length === 0 && !isLoading && <p>No advertisements</p>}
       {isLoading && <Spinner animation='border' variant='primary' />}
       {!isLoading && <AllAds />}
