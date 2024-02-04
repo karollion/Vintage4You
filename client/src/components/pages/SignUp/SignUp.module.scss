@@ -1,0 +1,24 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .card {
+    @extend %shadowCard;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid $cadr-border-color;
+    position: relative;
+    padding: 10px;
+    background: $card-bg-color;
+    margin: 20px 10px;
+  
+    label {
+      font-size: calc($base-size * 1.7);
+    }
+  }
+}

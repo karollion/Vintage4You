@@ -1,10 +1,11 @@
-//import styles from './Login.module.scss'
+import styles from './Login.module.scss'
 import { Alert, Spinner, Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { API_URL } from '../../../config';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../../redux/usersRedux';
 import { useNavigate } from "react-router-dom";
+import Title from '../../common/Title/Title';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -47,60 +48,62 @@ const Login = () => {
       })
   };
   return (
-    <Form onSubmit={handleSubmit} className='col-12 col-sm-3 mx-auto min-vh-100'> 
-      <h2 className='my-4'>Login</h2>
+    <div className={styles.root}>
+      <Title>Login</Title>
+      <Form onSubmit={handleSubmit} className={styles.card}> 
 
-      {status === 'success' && (
-        <Alert variant='success'>
-          <Alert.Heading>Succes!</Alert.Heading>
-          <p>You have been successfully logined in!</p>
-        </Alert>
-      )}
+        {status === 'success' && (
+          <Alert variant='success'>
+            <Alert.Heading>Succes!</Alert.Heading>
+            <p>You have been successfully logined in!</p>
+          </Alert>
+        )}
 
-      {status === 'serverError' && (
-        <Alert variant='danger'>
-          <Alert.Heading>Something went wrong...</Alert.Heading>
-          <p>Unexpected error... Try again!</p>
-        </Alert>
-      )}
+        {status === 'serverError' && (
+          <Alert variant='danger'>
+            <Alert.Heading>Something went wrong...</Alert.Heading>
+            <p>Unexpected error... Try again!</p>
+          </Alert>
+        )}
 
-      {status === 'clientError' && (
-        <Alert variant='danger'>
-          <Alert.Heading>Incorrect data</Alert.Heading>
-          <p>Login or password are incorrect...</p>
-        </Alert>
-      )}
+        {status === 'clientError' && (
+          <Alert variant='danger'>
+            <Alert.Heading>Incorrect data</Alert.Heading>
+            <p>Login or password are incorrect...</p>
+          </Alert>
+        )}
 
-      {status === 'loading' && (
-        <Spinner animation='border' role='status' className='block mx-auto'>
-          <span className='visually-hidden'>Loading...</span>
-        </Spinner>
-      )}
+        {status === 'loading' && (
+          <Spinner animation='border' role='status' className='block mx-auto'>
+            <span className='visually-hidden'>Loading...</span>
+          </Spinner>
+        )}
 
-      <Form.Group className='mb-3' controlId='formLogin'>
-        <Form.Label>Login</Form.Label>
-        <Form.Control 
-          type='text' 
-          value={login} 
-          onChange={e => setLogin(e.target.value)} 
-          placeholder='Enter login' />
-      </Form.Group>
+        <Form.Group className='mb-3' controlId='formLogin'>
+          <Form.Label>Login</Form.Label>
+          <Form.Control 
+            type='text' 
+            value={login} 
+            onChange={e => setLogin(e.target.value)} 
+            placeholder='Enter login' />
+        </Form.Group>
 
-      <Form.Group className='mb-3' controlId='formPassword'>
-        <Form.Label>Password</Form.Label>
-        <Form.Control 
-          type='password' 
-          value={password} 
-          onChange={e => setPassword(e.target.value)} 
-          placeholder='Enter password' />
-      </Form.Group>
+        <Form.Group className='mb-3' controlId='formPassword'>
+          <Form.Label>Password</Form.Label>
+          <Form.Control 
+            type='password' 
+            value={password} 
+            onChange={e => setPassword(e.target.value)} 
+            placeholder='Enter password' />
+        </Form.Group>
 
 
-      <Button variant='primary' type='submit' >
-        Sign in
-      </Button>
+        <Button variant='primary' type='submit' >
+          Sign in
+        </Button>
 
-    </Form>
+      </Form>
+    </div>
   );
 };
 

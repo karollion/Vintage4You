@@ -2,9 +2,9 @@
 
 .title {
   color: $title-text-color;
-  font-size: calc($base-size * 3);
+  font-size: calc($base-size * 4);
   text-align: center;
-  margin: 10px 0;
-  font-family: $font-text;
+  margin: 20px 0 0 0;
+  font-family: $title-text-font;
   font-weight: 600;
 }

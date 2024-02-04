@@ -17,15 +17,20 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
-$text-color-dark: #0f0f0f;
+$text-color-dark: #1a1a1a;
+
+// ------ Nav bar ------ //
+
+$nav-bg-color: #395b6e;
 
 // ------ Search bar ------ //
 
-$searchbar-bg-color: #1f71a0;
+$searchbar-bg-color: #647f8f;
 
 // ------ Title ------ //
 
 $title-text-color: $text-color-dark;
+$title-text-font: $font-text;
 
 // ------ Card ------ //
 

@@ -4,7 +4,7 @@ import { Navigate, Link } from "react-router-dom";
 import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { getUser } from '../../../redux/usersRedux';
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { IMGS_URL } from '../../../config';
 import Container from '../../common/container/Container';
 
