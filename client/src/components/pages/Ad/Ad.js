@@ -21,12 +21,12 @@ const Ad = () => {
         <Button className={styles.btn} variant="primary" as={Link} to={"/"}>Back</Button>
         <div className={styles.body}>
           <img variant='top' src={IMGS_URL + ad.picture} alt={ad.title} className={styles.img} />
-          <div>
+          <div className={styles.adBoxs}>
             <h3>{ad.title}</h3>
-              <p>Price: ${ad.price}</p>
-              <p>Location: {ad.location}</p>
-              <p>Published date / last edited: {ad.date.substring(0, 10)}</p>
-              <p>Content:</p>
+              <p className={styles.price}>{ad.price}$</p>
+              <p><span>Location: </span>{ad.location}</p>
+              <p><span>Published date / last edited: </span>{ad.date.substring(0, 10)}</p>
+              <p><span>Description:</span></p>
               <p>{ad.content}</p>
               
               {user && user.user.id === ad.user._id && (
