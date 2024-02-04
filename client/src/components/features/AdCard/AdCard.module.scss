@@ -1,6 +1,31 @@
+@import '../../../styles/settings.scss';
 
-.img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.card{
+  border-radius: 5px;
+  
+  .img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .body {
+    background: $card-bg-color;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+
+    h3 {
+      margin-bottom: 14px;
+    }
+
+    p {
+      margin: 2px;
+      font-size: calc($base-size * 1.5);
+    }
+
+    p:last-of-type {
+      margin-bottom: 14px;
+    }
+  }
 }
