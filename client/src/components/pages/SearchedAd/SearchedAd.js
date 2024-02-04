@@ -1,8 +1,12 @@
+import styles from './SearchedAd.module.scss'
 import React, { useEffect, useState } from 'react'
-import { Alert, Spinner } from 'react-bootstrap'
+import { Alert, Row, Spinner } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { API_URL } from '../../../config'
 import AdCard from '../../features/AdCard/AdCard'
+import Title from '../../common/Title/Title'
+import Container from '../../common/container/Container'
+import SearchForm from '../../features/SearchForm/SearchForm'
 
 const SearchedAd = () => {
   const { searchPhase } = useParams()
@@ -30,27 +34,30 @@ const SearchedAd = () => {
 	if (!adsToShow) return <p>Nothing matches your search....</p>
 
 	return (
-		<div className={'container'}>
-			<h2 className='my-4' >Searched advertisements</h2>
-			<h2>Search phrase: &quot;{searchPhase}&quot;</h2>
-			{status === 'loading' && (
-				<Spinner animation='border' role='status'>
-					<span className='visually-hidden'>Loading...</span>
-				</Spinner>
-			)}
+		<div className={styles.root}>
+			<SearchForm />
+			<Container>
+				<Title>Searched advertisements</Title>
+				<h4>All ads found for the phrase: &quot;{searchPhase}&quot;</h4>
+				{status === 'loading' && (
+					<Spinner animation='border' role='status'>
+						<span className='visually-hidden'>Loading...</span>
+					</Spinner>
+				)}
 
-			{status === 'serverError' && (
-				<Alert variant='danger'>
-					<Alert.Heading>Something went wrong...</Alert.Heading>
-					<p>Unexpected error...Try again!.</p>
-				</Alert>
-			)}
+				{status === 'serverError' && (
+					<Alert variant='danger'>
+						<Alert.Heading>Something went wrong...</Alert.Heading>
+						<p>Unexpected error...Try again!.</p>
+					</Alert>
+				)}
 
-			<div className='d-flex justify-content-start flex-wrap mt-4'>
-				{adsToShow.map((ad, i) => (
-					<AdCard key={ad._id} ad={ad}/>
-				))}
-			</div>
+				<Row>
+					{adsToShow.map((ad, i) => (
+						<AdCard key={ad._id} ad={ad}/>
+					))}
+				</Row>
+			</Container>
 		</div>
 	)
 };
