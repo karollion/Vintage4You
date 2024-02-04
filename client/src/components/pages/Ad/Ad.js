@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { getUser } from '../../../redux/usersRedux';
 import { Button, Card } from 'react-bootstrap';
 import { IMGS_URL } from '../../../config';
+import Container from '../../common/container/Container';
 
 const Ad = () => {
   const user = useSelector(getUser);
@@ -15,50 +16,45 @@ const Ad = () => {
   
   if (!ad) return <Navigate to="/" />;
   return (
+    <Container>
+      <div className={styles.root}>
+        <Button className={styles.btn} variant="primary" as={Link} to={"/"}>Back</Button>
+        <div className={styles.body}>
+          <img variant='top' src={IMGS_URL + ad.picture} alt={ad.title} className={styles.img} />
+          <div>
+            <h3>{ad.title}</h3>
+              <p>Price: {ad.price}</p> $ 
 
-    <div className='min-vh-100 px-4'>
-      <h2 className='my-4' >Advertisement</h2>
-      <Card className={styles.card}>
-        <Card.Img variant='top' src={IMGS_URL + ad.picture} className={styles.img} />
-        <Card.Body>
-          <Card.Title><h3>{ad.title}</h3></Card.Title>
-          <Card.Text>
-            <b>Price:</b> $ {ad.price}
-          </Card.Text>
+              <b>Location:</b> {ad.location}
 
-          <Card.Text>
-            <b>Location:</b> {ad.location}
-          </Card.Text>
-          <Card.Text>
-            <b>Published date / last edited:</b> {ad.date.substring(0, 10)}
-          </Card.Text>
+              <b>Published date / last edited:</b> {ad.date.substring(0, 10)}
 
-          <Card.Text>
-            <b>Seller: </b>{ad.user.login}
-            <img src={IMGS_URL + ad.user.avatar} className={styles.avatar} alt='user avatar'></img> 
-          </Card.Text>
+              <b>Content:</b>
 
-          <Card.Text>
-            <b> Telephone no:</b> {ad.user.phone}
-          </Card.Text>
+              {ad.content}
 
-          <Card.Text>
-            <b>Content:</b>
-          </Card.Text>
-
-          <Card className='p-2'>
-            {ad.content}
-          </Card>
-        
-          {user && user.user.id === ad.user._id && (
-            <div className={styles.btnContaier}>
-              <Button className={styles.btn} variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>
-              <Button className={styles.btn} variant="danger" as={Link} to={"/ad/deleteAd/" + ad._id}>Delete</Button>
+            {user && user.user.id === ad.user._id && (
+              <div className={styles.btnContaier}>
+                <Button className={styles.btn} variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>
+                <Button className={styles.btn} variant="danger" as={Link} to={"/ad/deleteAd/" + ad._id}>Delete</Button>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className={styles.body}>
+          <h3>Seller</h3>
+          <div className={styles.userBox}>
+            <div className={styles.imgBox}>
+              <img src={IMGS_URL + ad.user.avatar} className={styles.avatar} alt='user avatar'></img> 
             </div>
-          )}
-        </Card.Body>
-      </Card>
-    </div>
+            <div className={styles.userInfo}>
+              <h4>{ad.user.login}</h4>
+              <h4>Phone: {ad.user.phone}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
   );
 };
 

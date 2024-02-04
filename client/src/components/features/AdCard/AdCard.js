@@ -1,6 +1,6 @@
 import styles from './AdCard.module.scss';
 import { Link } from 'react-router-dom';
-import { Card, Col, Button } from 'react-bootstrap';
+import { Col, Button } from 'react-bootstrap';
 import { IMGS_URL } from '../../../config';
 import PropTypes from 'prop-types'
 

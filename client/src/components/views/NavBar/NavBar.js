@@ -1,5 +1,5 @@
 import styles from './NavBar.module.scss'
-import Container from 'react-bootstrap/Container';
+import Container from '../../common/container/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
