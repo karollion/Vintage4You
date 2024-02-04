@@ -23,22 +23,18 @@ const Ad = () => {
           <img variant='top' src={IMGS_URL + ad.picture} alt={ad.title} className={styles.img} />
           <div>
             <h3>{ad.title}</h3>
-              <p>Price: {ad.price}</p> $ 
-
-              <b>Location:</b> {ad.location}
-
-              <b>Published date / last edited:</b> {ad.date.substring(0, 10)}
-
-              <b>Content:</b>
-
-              {ad.content}
-
-            {user && user.user.id === ad.user._id && (
-              <div className={styles.btnContaier}>
-                <Button className={styles.btn} variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>
-                <Button className={styles.btn} variant="danger" as={Link} to={"/ad/deleteAd/" + ad._id}>Delete</Button>
-              </div>
-            )}
+              <p>Price: ${ad.price}</p>
+              <p>Location: {ad.location}</p>
+              <p>Published date / last edited: {ad.date.substring(0, 10)}</p>
+              <p>Content:</p>
+              <p>{ad.content}</p>
+              
+              {user && user.user.id === ad.user._id && (
+                <div className={styles.btnContaier}>
+                  <Button className={styles.btn} variant="primary" as={Link} to={"/ad/editAd/" + ad._id}>Edit</Button>
+                  <Button className={styles.btn} variant="danger" as={Link} to={"/ad/deleteAd/" + ad._id}>Delete</Button>
+                </div>
+              )}
           </div>
         </div>
         <div className={styles.body}>
@@ -49,7 +45,8 @@ const Ad = () => {
             </div>
             <div className={styles.userInfo}>
               <h4>{ad.user.login}</h4>
-              <h4>Phone: {ad.user.phone}</h4>
+              <h4>Phone:</h4>
+              <h4>{ad.user.phone}</h4>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@
 		height: 100%;
 		min-height: 300px;
 		object-fit: contain;
+		margin-bottom: 15px;
 	}
 	
 	.btnContaier {
@@ -33,6 +34,7 @@
 		width: 100%;
 		background: $card-bg-color;
 		border-radius: 5px;
+		padding: 10px;
 	}
 
 	h3 {
@@ -63,6 +65,17 @@
 			flex-direction: column;
 			justify-content: space-around;
 			margin: 10px;
+		}
+	}
+
+	@media (max-width: 300px){
+		.userBox {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.userInfo {
+			align-items: center;
 		}
 	}
 }
