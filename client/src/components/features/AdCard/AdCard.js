@@ -9,6 +9,7 @@ const AdCard = ({ ad }) => {
   return (
     <Col xs='12' md='6' lg='4' className='mb-4'>
       <div className={styles.card}>
+        <div className={styles.price}><p>{ad.price}$</p></div>
         <img variant='top' alt='ad_image' src={IMGS_URL + ad.picture} className={styles.img} />
 			  <div className={styles.body}>
           <h3>{ad.title}</h3>

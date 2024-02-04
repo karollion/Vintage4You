@@ -1,7 +1,10 @@
 @import '../../../styles/settings.scss';
 
 .card{
+  @extend %shadowCard;
   border-radius: 5px;
+  border: 1px solid $cadr-border-color;
+  position: relative;
   
   .img {
     width: 100%;
@@ -9,10 +12,31 @@
     object-fit: cover;
     border-radius: 5px 5px 0 0;
   }
+
+  .price {
+    @extend %shadowCard;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    padding: 10px 20px;
+    background: $card-bg-color;
+    border-radius: 0 0 15px 15px;
+    border-left: 1px solid $cadr-border-color;
+
+    p {
+      margin: 0;
+      font-family: $font-text;
+      font-size: calc($base-size * 1.5);
+      font-weight: 900;
+    }
+  }
   
   .body {
     background: $card-bg-color;
     border-radius: 0 0 5px 5px;
+    border: 1px solid $cadr-border-color;
     padding: 10px;
 
     h3 {

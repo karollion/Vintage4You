@@ -28,6 +28,7 @@
 	
 	
 	.body {
+		@extend %shadowCard;
 		display: flex;
 		flex-direction: column;
 		max-width: 600px;
@@ -35,11 +36,12 @@
 		background: $card-bg-color;
 		border-radius: 5px;
 		padding: 10px;
+		border: 1px solid $cadr-border-color;
 	}
 
 	h3 {
 		text-align: center;
-		border-bottom: 1px solid $color-active;
+		border-bottom: 1px solid $cadr-border-color;
 	}
 
 	.adBoxs {
@@ -65,10 +67,11 @@
 			justify-content: center;
 		}
 		.avatar {
+			@extend %shadowCard;
 			width: 120px;
 			aspect-ratio: 1 / 1;
 			margin: 10px;
-			border: 1px solid $color-active;
+			border: 1px solid $cadr-border-color;
 			border-radius: 50%;
 			object-fit: contain;
 		}
