@@ -3,7 +3,6 @@
 .card{
   @extend %shadowCard;
   border-radius: 5px;
-  border: 1px solid $cadr-border-color;
   position: relative;
   
   .img {

@@ -1,9 +1,10 @@
 import styles from './SignUp.module.scss'
-import { Alert, Button, Form, Spinner } from 'react-bootstrap';
+import { Alert, Form, Spinner } from 'react-bootstrap';
 import { useState } from 'react';
 import { API_URL } from '../../../config';
 import { useNavigate } from "react-router-dom";
 import Title from '../../common/Title/Title';
+import Button from '../../common/Button/Button';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -123,10 +124,7 @@ const SignUp = () => {
             onChange={e => setAvatar(e.target.files[0])} />
         </Form.Group>
 
-        <Button variant='primary' type='submit' >
-          Submit
-        </Button>
-
+        <Button type='submit' >Submit</Button>
       </Form>
     </div>
   );

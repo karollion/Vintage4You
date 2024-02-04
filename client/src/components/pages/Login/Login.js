@@ -1,11 +1,12 @@
 import styles from './Login.module.scss'
-import { Alert, Spinner, Button, Form } from 'react-bootstrap';
+import { Alert, Spinner, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import { API_URL } from '../../../config';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../../redux/usersRedux';
 import { useNavigate } from "react-router-dom";
 import Title from '../../common/Title/Title';
+import Button from '../../common/Button/Button';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -98,11 +99,7 @@ const Login = () => {
             placeholder='Enter password' />
         </Form.Group>
 
-
-        <Button variant='primary' type='submit' >
-          Sign in
-        </Button>
-
+        <Button type='submit' >Sign in</Button>
       </Form>
     </div>
   );

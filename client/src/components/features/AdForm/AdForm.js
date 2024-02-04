@@ -1,4 +1,5 @@
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import Button from "../../common/Button/Button";
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
 
@@ -20,7 +21,7 @@ const AdForm = ({ action, actionText, ...props }) => {
   };
   
   return (
-    <Form onSubmit={validate(handleSubmit)} className='col-12 col-sm-3 mx-auto'>
+    <Form onSubmit={validate(handleSubmit)} className=''>
 
       <h2 className='my-4' >{props.pageTitle}</h2>
 
@@ -78,9 +79,7 @@ const AdForm = ({ action, actionText, ...props }) => {
         {errors.location && <small className="d-block form-text text-danger mt-2">Location can't be empty</small>}
       </Form.Group>
 
-      <Button className='my-3' variant="primary" type="submit">
-      {actionText}
-      </Button>
+      <Button type="submit">{actionText}</Button>
     </Form>
   );
 };

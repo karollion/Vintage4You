@@ -1,8 +1,9 @@
 import styles from './SearchForm.module.scss';
-import { Form, Button} from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Container from '../../common/container/Container';
+import Button from '../../common/Button/Button';
 
 const SearchForm = () => {
   const navigate = useNavigate();
@@ -28,9 +29,7 @@ const SearchForm = () => {
             placeholder="Search ad"
           />
           
-          <Button variant="primary" type="submit">
-            Search
-          </Button>
+          <Button type="submit">Search</Button>
         </Form>
       </Container>
       <div className={styles.vaves}></div> 

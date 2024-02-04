@@ -1,12 +1,15 @@
 import styles from './AddAd.module.scss';
 import AddAdForm from '../../features/AddAdForm/AddAdForm';
+import Title from '../../common/Title/Title';
 
 const AddAd = () => {
   return (
-    <div className='min-vh-100'>
+    <div className={styles.root}>
       <div className={styles.vaves}></div> 
-      <h2 className='my-4' >Add Advertisement</h2>
-      <AddAdForm />
+      <Title>Add new ad</Title>
+      <div className={styles.body}>
+        <AddAdForm />
+      </div>
     </div>
   );
 };

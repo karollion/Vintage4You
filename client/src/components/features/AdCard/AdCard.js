@@ -1,10 +1,17 @@
 import styles from './AdCard.module.scss';
-import { Link } from 'react-router-dom';
-import { Col, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
+import Button from '../../common/Button/Button';
 import { IMGS_URL } from '../../../config';
 import PropTypes from 'prop-types'
 
 const AdCard = ({ ad }) => {
+  const navigate = useNavigate();
+
+  const handleClick = e => {
+    e.preventDefault();
+    navigate("/ad/" + ad._id);
+  }
 
   return (
     <Col xs='12' md='6' lg='4' className='mb-4'>
@@ -15,7 +22,7 @@ const AdCard = ({ ad }) => {
           <h3>{ad.title}</h3>
           <p>Location: {ad.location}</p>
           <p>Date added: {ad.date.substring(0, 10)}</p>
-          <Button variant="primary" as={Link} to={"/ad/" + ad._id}>Read more</Button>
+          <Button variant="primary" action={handleClick}>Read more</Button>
         </div>
       </div>
     </Col>

@@ -1,0 +1,25 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .body {
+    @extend %shadowCard;
+    border-radius: 5px;
+    border: 1px solid $cadr-border-color;
+    position: relative;
+    padding: 10px;
+    background: $card-bg-color;
+    margin: 20px 10px;
+  }
+  
+  .vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves2.svg);
+    background-size: cover;
+  }
+}
