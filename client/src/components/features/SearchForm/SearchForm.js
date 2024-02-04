@@ -33,6 +33,7 @@ const SearchForm = () => {
           </Button>
         </Form>
       </Container>
+      <div className={styles.vaves}></div> 
     </div>
   );
 };

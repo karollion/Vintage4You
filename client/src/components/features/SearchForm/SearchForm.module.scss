@@ -2,9 +2,10 @@
 
 .root {
   width: 100%;
-  background: $searchbar-bg-color;
-  padding: 10px;
-  
+  height: 100px;
+  background-image: url(../../../../public/images/vaves2.svg);
+  background-size: cover;
+
   .form {
     display: flex;
     justify-content: center;
@@ -21,7 +22,6 @@
       width: 150px;
     }
   }
-
 
   @media (max-width: 576px) {
     .form {

@@ -1,0 +1,16 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  width: 100%;
+  height: 100px;
+  background-image: url(../../../../public/images/vaves3.svg);
+  background-size: cover;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: $text-color-dark;
+  }
+}

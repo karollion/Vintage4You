@@ -4,6 +4,12 @@ $color-dark: #2f3542;
 $color-success: #26de81;
 $color-warning: #e1644e;
 
+$color-blue-light: #93b9ff;
+$color-blue-mid: #6198ff;
+$color-blue-dark: #004cbb;
+
+$color-black:  #1a1a1a;
+
 $font-text: 'Lato', sans-serif;
 $font-text2: 'Sacramento', cursive;
 
@@ -17,15 +23,15 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
-$text-color-dark: #1a1a1a;
+$text-color-dark: $color-black;
 
 // ------ Nav bar ------ //
 
-$nav-bg-color: #395b6e;
+$nav-bg-color: $color-blue-dark;
 
 // ------ Search bar ------ //
 
-$searchbar-bg-color: #647f8f;
+$searchbar-bg-color: $color-blue-mid;
 
 // ------ Title ------ //
 

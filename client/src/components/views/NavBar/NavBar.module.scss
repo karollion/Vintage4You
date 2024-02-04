@@ -2,7 +2,7 @@
 
 .root {
   background: $nav-bg-color;
-  text-shadow: 0 0 5px pink;
+  //text-shadow: 0 0 5px pink;
   font-size: calc($base-size * 1.5);
 
   a {
@@ -33,5 +33,12 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves.svg);
+    background-size: cover;
   }
 }

@@ -16,8 +16,9 @@ const Ad = () => {
   
   if (!ad) return <Navigate to="/" />;
   return (
-    <Container>
-      <div className={styles.root}>
+    <div className={styles.root}>
+      <div className={styles.vaves}></div> 
+      <Container>
         <Button className={styles.btn} variant="primary" as={Link} to={"/"}>Back</Button>
         <div className={styles.body}>
           <img variant='top' src={IMGS_URL + ad.picture} alt={ad.title} className={styles.img} />
@@ -50,8 +51,8 @@ const Ad = () => {
             </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

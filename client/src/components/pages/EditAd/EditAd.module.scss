@@ -1,0 +1,10 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  .vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves2.svg);
+    background-size: cover;
+  }
+}

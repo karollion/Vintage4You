@@ -85,6 +85,13 @@
 		}
 	}
 
+	.vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves2.svg);
+    background-size: cover;
+  }
+
 	@media (max-width: 300px){
 		.userBox {
 			flex-direction: column;

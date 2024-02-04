@@ -30,7 +30,8 @@ const NavBar = () => {
               </div>)}
             </Navbar.Collapse>
         </Navbar>
-      </Container> 
+      </Container>
+      <div className={styles.vaves}></div> 
     </div>
   );
 };
