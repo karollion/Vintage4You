@@ -1,9 +1,13 @@
-import { Form } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import Button from "../../common/Button/Button";
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useParams } from 'react-router';
+import { useNavigate } from "react-router-dom";
 
 const AdForm = ({ action, actionText, ...props }) => {
+  const navigate = useNavigate();
+  const  {id}  = useParams();
 
   const [title, setTitle] = useState(props.title || '');
   const [content, setContent] = useState(props.content || '');
@@ -19,11 +23,16 @@ const AdForm = ({ action, actionText, ...props }) => {
       action({ title, content, picture, price, location, user });
     }
   };
+
+  const handleBack = e => {
+    e.preventDefault();
+    navigate("/ad/" + id);
+  }
   
   return (
     <Form onSubmit={validate(handleSubmit)} className=''>
 
-      <h2 className='my-4' >{props.pageTitle}</h2>
+      <h2 className='my-3 text-center' >{props.pageTitle}</h2>
 
       <Form.Group  controlId="formtitle">
         <Form.Label>Title</Form.Label>
@@ -79,7 +88,16 @@ const AdForm = ({ action, actionText, ...props }) => {
         {errors.location && <small className="d-block form-text text-danger mt-2">Location can't be empty</small>}
       </Form.Group>
 
-      <Button type="submit">{actionText}</Button>
+      <Row className="d-flex justify-content-center mt-3">
+        {id ? <Col className='d-flex justify-content-center'>
+          <Button action={handleBack}>Back</Button>
+          
+        </Col> : null}
+        <Col  className='d-flex justify-content-center'>
+          <Button type="submit">{actionText}</Button>
+        </Col>
+      </Row>
+      
     </Form>
   );
 };

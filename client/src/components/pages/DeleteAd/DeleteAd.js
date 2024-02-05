@@ -40,11 +40,11 @@ const DeleteAd = () => {
             <Alert.Heading>Are you sure?</Alert.Heading>
             <p>Do you want to permanently delete this advertisement?</p>
         </Alert>
-        <Row className="d-flex justify-content-center">
-          <Col>
+        <Row className="d-flex justify-content-center mt-3">
+          <Col  className='d-flex justify-content-center'>
             <Button className="w-100 p-3" action={handleClick}>NO</Button>
           </Col>
-          <Col>
+          <Col  className='d-flex justify-content-center'>
             <Button className="w-100 p-3" action={handleAction}>YES</Button>
           </Col>
         </Row>

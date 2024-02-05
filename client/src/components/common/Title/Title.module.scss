@@ -2,10 +2,10 @@
 
 .title {
   color: $title-text-color;
+  text-shadow: $text-color-dark 0 2px 4px;
   font-size: calc($base-size * 4);
   text-align: center;
   margin: 20px 0 0 0;
   font-family: $title-text-font;
   font-weight: 600;
-  text-shadow: $text-color-dark 0 2px 4px;
 }
