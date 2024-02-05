@@ -3,3 +3,25 @@
 .wrong {
   padding: $base-size;
 }
+
+@import '../../../styles/settings.scss';
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h4 {
+    max-width: 400px;
+    margin: 40px auto;
+    color: $text-color-dark;
+  }
+
+  .vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves2.svg);
+    background-size: cover;
+  }
+}

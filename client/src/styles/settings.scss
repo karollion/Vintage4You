@@ -7,6 +7,7 @@ $color-warning: #e1644e;
 $color-blue-light: #93b9ff;
 $color-blue-mid: #6198ff;
 $color-blue-dark: #004cbb;
+$color-blue-vdark: #001f3f;
 
 $color-black:  #1a1a1a;
 
@@ -23,7 +24,7 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
-$text-color-dark: $color-black;
+$text-color-dark: $color-blue-vdark;
 $text-color-light: $color-light;
 
 // ------ Nav bar ------ //
@@ -36,7 +37,7 @@ $searchbar-bg-color: $color-blue-mid;
 
 // ------ Title ------ //
 
-$title-text-color: $text-color-dark;
+$title-text-color: $color-light;
 $title-text-font: $font-text;
 
 // ------ Card ------ //
