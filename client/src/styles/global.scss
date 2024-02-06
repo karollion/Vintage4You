@@ -8,7 +8,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: $color-blue-light;
+  background: rgb(147,185,255);
+background: linear-gradient(0deg, rgba(147,185,255,1) 0%, rgba(147,185,255,1) 30%, rgba(180,206,255,1) 50%, rgba(147,185,255,1) 70%, rgba(147,185,255,1) 100%);
   font-family: $font-text;
   font-size: ($base-size * 1.1);
   color: $text-color-dark;
