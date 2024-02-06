@@ -22,7 +22,9 @@ const AdCard = ({ ad }) => {
           <h3>{ad.title}</h3>
           <p>Location: {ad.location}</p>
           <p>Date added: {ad.date.substring(0, 10)}</p>
-          <Button variant="primary" action={handleClick}>Read more</Button>
+          <div className={styles.buttonBox}>
+            <Button variant="primary" action={handleClick}>Read more</Button>
+          </div>
         </div>
       </div>
     </Col>
