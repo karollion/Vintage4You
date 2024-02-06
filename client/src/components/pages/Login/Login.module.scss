@@ -8,15 +8,23 @@
 
   .card {
     @extend %shadowCard;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
     border: 1px solid $cadr-border-color;
     position: relative;
     padding: 10px;
     background: $card-bg-color;
-    margin: 20px 10px;
+    margin: 40px 10px;
   
     label {
       font-size: calc($base-size * 1.7);
+    }
+
+    .buttonBox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 

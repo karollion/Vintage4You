@@ -98,8 +98,9 @@ const Login = () => {
             onChange={e => setPassword(e.target.value)} 
             placeholder='Enter password' />
         </Form.Group>
-
-        <Button type='submit' >Sign in</Button>
+        <div className={styles.buttonBox}>
+          <Button type='submit' >Sign in</Button>
+        </div>
       </Form>
     </div>
   );

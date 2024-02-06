@@ -123,8 +123,10 @@ const SignUp = () => {
             type='file' 
             onChange={e => setAvatar(e.target.files[0])} />
         </Form.Group>
-
-        <Button type='submit' >Submit</Button>
+        
+        <div className={styles.buttonBox}>
+          <Button type='submit' >Submit</Button>
+        </div>
       </Form>
     </div>
   );
