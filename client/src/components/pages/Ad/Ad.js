@@ -7,6 +7,8 @@ import { getUser } from '../../../redux/usersRedux';
 import Button from '../../common/Button/Button';
 import { IMGS_URL } from '../../../config';
 import Container from '../../common/container/Container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Ad = () => {
   const user = useSelector(getUser);
@@ -63,8 +65,7 @@ const Ad = () => {
               </div>
               <div className={styles.userInfo}>
                 <h4>{ad.user.login}</h4>
-                <h4>Phone:</h4>
-                <h4>{ad.user.phone}</h4>
+                <h4><FontAwesomeIcon  className={styles.phoneIcon} icon={faPhone} /> {ad.user.phone}</h4>
               </div>
             </div>
           </div>

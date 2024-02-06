@@ -85,6 +85,14 @@
 			flex-direction: column;
 			justify-content: space-around;
 			margin: 10px;
+
+			span {
+				text-align: center;
+			}
+
+			.phoneIcon {
+				margin-right: 5px;
+			}
 		}
 	}
 
@@ -95,6 +103,15 @@
     background-size: cover;
   }
 
+	@media (max-width: 500px){
+		.userInfo {
+			h4 {
+				font-size: calc($base-size * 1.5);
+				white-space: nowrap;
+			}
+		}
+	}
+	
 	@media (max-width: 300px){
 		.userBox {
 			flex-direction: column;
@@ -103,6 +120,13 @@
 
 		.userInfo {
 			align-items: center;
+
+			h4 {
+				font-size: calc($base-size * 1.2);
+				white-space: nowrap;
+			}
 		}
 	}
+
+	
 }
