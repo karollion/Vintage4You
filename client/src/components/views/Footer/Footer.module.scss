@@ -2,16 +2,29 @@
 
 .root {
   width: 100%;
-  height: 100px;
-  background-image: url(../../../../public/images/vaves3.svg);
-  background-size: cover;  
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: $color-light;
+  text-shadow: $text-shadow;
 
   a {
     text-decoration: none;
-    color: $text-color-dark;
+    color: $color-light;
+  }
+
+  .text {
+    height: 50px;
+    width: 100%;
+    background: $footer-bg-color;
+  }
+
+  .vaves {
+    width: 100%;
+    height: 100px;
+    background-image: url(../../../../public/images/vaves3.svg);
+    background-size: cover;
   }
 }

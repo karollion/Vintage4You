@@ -11,9 +11,6 @@ $color-blue-vdark: #001f3f;
 
 $color-black:  #1a1a1a;
 
-$font-text: 'Lato', sans-serif;
-$font-text2: 'Sacramento', cursive;
-
 %shadowCard {
   -webkit-box-shadow: 5px 5px 24px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 5px 5px 24px 0px rgba(66, 68, 90, 1);
@@ -26,6 +23,11 @@ $transition: all 0.5s;
 
 $text-color-dark: $color-blue-vdark;
 $text-color-light: $color-light;
+
+$text-shadow: $text-color-dark 0 2px 4px;
+
+$font-text: 'Lato', sans-serif;
+$font-text2: 'Sacramento', cursive;
 
 // ------ Nav bar ------ //
 
@@ -44,3 +46,7 @@ $title-text-font: $font-text;
 
 $card-bg-color: $color-light;
 $cadr-border-color: $color-active;
+
+// ------ Footer ------ //
+
+$footer-bg-color: $color-blue-mid;
