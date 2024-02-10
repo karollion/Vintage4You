@@ -41,11 +41,11 @@ const DeleteAd = () => {
             <p>Do you want to permanently delete this advertisement?</p>
         </Alert>
         <Row className="d-flex justify-content-center mt-3">
-          <Col  className='d-flex justify-content-center'>
-            <Button className="w-100 p-3" action={handleClick}>NO</Button>
+          <Col xs='12' md='6' className='d-flex justify-content-center'>
+            <Button action={handleClick}>NO</Button>
           </Col>
-          <Col  className='d-flex justify-content-center'>
-            <Button className="w-100 p-3" action={handleAction}>YES</Button>
+          <Col xs='12' md='6' className='d-flex justify-content-center'>
+            <Button action={handleAction}>YES</Button>
           </Col>
         </Row>
       </div>

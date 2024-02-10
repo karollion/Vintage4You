@@ -9,6 +9,7 @@ import { IMGS_URL } from '../../../config';
 import Container from '../../common/container/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row } from 'react-bootstrap';
 
 const Ad = () => {
   const user = useSelector(getUser);
@@ -38,8 +39,10 @@ const Ad = () => {
       <div className={styles.vaves}></div> 
       <Container>
         <div className={styles.box}>
-          <Button className={styles.btn} action={handleBack}>Back to home</Button>
           <div className={styles.body}>
+          <Col xs='12' className='d-flex justify-content-center my-3'>
+            <Button className={styles.btn} action={handleBack}>Back to home</Button>
+          </Col>
             <img variant='top' src={IMGS_URL + ad.picture} alt={ad.title} className={styles.img} />
             <div className={styles.adBoxs}>
               <h3>{ad.title}</h3>
@@ -50,10 +53,14 @@ const Ad = () => {
                 <p>{ad.content}</p>
                 
                 {user && user.user.id === ad.user._id && (
-                  <div className={styles.btnContaier}>
-                    <Button className={styles.btn} action={handleEdit}>Edit</Button>
-                    <Button className={styles.btn} action={handleDelete}>Delete</Button>
-                  </div>
+                  <Row className="d-flex justify-content-center mt-3">
+                    <Col xs='12' md='6' className='d-flex justify-content-center'>
+                      <Button action={handleEdit}>Edit</Button>
+                    </Col>
+                    <Col  xs='12' md='6' className='d-flex justify-content-center'>
+                      <Button action={handleDelete}>Delete</Button>
+                    </Col>
+                  </Row>
                 )}
             </div>
           </div>

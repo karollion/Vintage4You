@@ -1,3 +1,4 @@
+import styles from './AdForm.module.scss';
 import { Col, Form, Row } from "react-bootstrap";
 import Button from "../../common/Button/Button";
 import { useState } from 'react';
@@ -30,9 +31,8 @@ const AdForm = ({ action, actionText, ...props }) => {
   }
   
   return (
-    <Form onSubmit={validate(handleSubmit)} className=''>
-
-      <h2 className='my-3 text-center' >{props.pageTitle}</h2>
+    <Form onSubmit={validate(handleSubmit)} className={styles.root}>
+      <p></p>
 
       <Form.Group  controlId="formtitle">
         <Form.Label>Title</Form.Label>
@@ -89,12 +89,12 @@ const AdForm = ({ action, actionText, ...props }) => {
       </Form.Group>
 
       <Row className="d-flex justify-content-center mt-3">
-        {id ? <Col className='d-flex justify-content-center'>
+        {id ? <Col  xs='12' md='6' className='d-flex justify-content-center'>
           <Button action={handleBack}>Back</Button>
           
         </Col> : null}
-        <Col  className='d-flex justify-content-center'>
-          <Button type="submit">{actionText}</Button>
+        <Col   xs='12' md='6' className='d-flex justify-content-center'>
+          <Button  type="submit">{actionText}</Button>
         </Col>
       </Row>
       
