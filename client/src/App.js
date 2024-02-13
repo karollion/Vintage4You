@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 //import { isUserLoginedIn } from './redux/usersRedux';
 import { fetchAds } from './redux/adsRedux';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import NavBar from './components/views/NavBar/NavBar';
 import Footer from './components/views/Footer/Footer';
 
@@ -23,10 +23,27 @@ function App() {
   //useEffect(() => dispatch(isUserLoginedIn()), [dispatch]);
   useEffect(() => dispatch(fetchAds()), [dispatch]);
 
+  const location = useLocation();
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [transitionStage, setTransistionStage] = useState("fadeIn");
+
+  useEffect(() => {
+    if (location !== displayLocation) setTransistionStage("fadeOut");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
   return (
     <div>
       <NavBar />
-        <Routes>
+      <div
+        className={`${transitionStage}`}
+        onAnimationEnd={() => {
+          if (transitionStage === "fadeOut") {
+            setTransistionStage("fadeIn");
+            setDisplayLocation(location);
+          }
+      }}>
+        <Routes  location={displayLocation}>
           <Route path="/" element={<Home/>} />
           <Route path="/ad/:id" element={<Ad/>} />
           <Route path="/ad/addAd" element={<AddAd/>} />
@@ -38,6 +55,7 @@ function App() {
           <Route path="/logout" element={<Logout/>} />
           <Route path="*" element={<WrongPage/>} />
         </Routes>
+      </div>
       <Footer />
     </div>
   );

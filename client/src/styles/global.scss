@@ -23,3 +23,31 @@ background: linear-gradient(0deg, rgba(147,185,255,1) 0%, rgba(147,185,255,1) 30
 }
 
 @import "./typography.scss";
+
+.fadeIn {
+  width: 100%;
+  animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+  width: 100%;
+  animation: 0.5s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
