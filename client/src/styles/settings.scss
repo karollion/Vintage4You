@@ -22,6 +22,8 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
+// ------ Text ------ //
+
 $text-color-dark: $color-blue-vdark;
 $text-color-light: $color-light;
 
@@ -35,6 +37,10 @@ $font-text2: 'Sacramento', cursive;
 $nav-bg-color: $color-blue-dark;
 
 // ------ Search bar ------ //
+
+.redBlinkBorder {
+  animation: redBoxShadowPulse 1s ease-in-out infinite;
+}
 
 $searchbar-bg-color: $color-blue-mid;
 
@@ -51,3 +57,19 @@ $cadr-border-color: $color-active;
 // ------ Footer ------ //
 
 $footer-bg-color: $color-blue-mid;
+
+// ------ Animations ------ //
+
+@keyframes redBoxShadowPulse {
+  0% {
+    box-shadow: 0px 0px 16px 1px rgba(255, 116, 116, 0);
+  }
+  50% {
+    box-shadow: 
+    0px 0px 16px 2px rgba(255, 116, 116, 1),
+    0px 0px 16px 3px rgba(255, 116, 116, 1);
+  }
+  100% {
+    box-shadow: 0px 0px 16px 1px rgba(255, 116, 116, 0);
+  }
+}

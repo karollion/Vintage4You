@@ -8,7 +8,7 @@ import Button from '../../common/Button/Button';
 const SearchForm = () => {
   const navigate = useNavigate();
   const [searchPhase, setSearchPhase] = useState('');
- 
+  const [isEmpty, setIsEmpty] = useState(false);
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -16,7 +16,10 @@ const SearchForm = () => {
       let adress = '/searchedAd/' + searchPhase;
       navigate(adress);
     } else {
-      
+      setIsEmpty(true);
+      setTimeout(() => { 
+        setIsEmpty(false);
+      }, 2000);
     }
   };
   
@@ -26,7 +29,8 @@ const SearchForm = () => {
         <Form onSubmit={handleSubmit} className={styles.form}>
 
           <input
-            className="form-control"
+            className={`form-control ${isEmpty ? 'redBlinkBorder' : ''}`}
+            id='search-input'
             value={searchPhase}
             onChange={(e) => setSearchPhase(e.target.value)}
             type="search"
