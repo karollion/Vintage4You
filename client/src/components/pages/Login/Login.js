@@ -36,6 +36,8 @@ const Login = () => {
           return res.json();
         } else if (res.status === 400) {
           setStatus('clientError');
+        } else if (res.status === 401) {
+          setStatus('clientError');
         } else {
           setStatus('serverError');
         }
