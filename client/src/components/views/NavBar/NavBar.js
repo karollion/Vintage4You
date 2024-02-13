@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div className={styles.root}>
       <Container>
-        <Navbar variant="dark" expand="lg" className=''>
+        <Navbar variant="dark" expand="lg" className={styles.navbar}>
             <Navbar.Brand className={styles.logo} as={NavLink} to="/">Vintage4You</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -24,11 +24,11 @@ const NavBar = () => {
                 {!user ? (<NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} as={NavLink} to="/signup">Sign up</NavLink>) : null }
                 {user ? (<NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} as={NavLink} to="/logout">Logout</NavLink>) : null }
               </Nav>
+            </Navbar.Collapse>
               {user &&  (
               <div className={styles.avatarBox}>
                 <img src={IMGS_URL + user.user.avatar} className={styles.avatar} alt='avatar'></img>
               </div>)}
-            </Navbar.Collapse>
         </Navbar>
       </Container>
       <div className={styles.vaves}></div> 
