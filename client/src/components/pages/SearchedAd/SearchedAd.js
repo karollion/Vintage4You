@@ -38,7 +38,8 @@ const SearchedAd = () => {
 			<SearchForm />
 			<Container>
 				<Title>Searched advertisements</Title>
-				<h4>All ads found for the phrase: &quot;{searchPhase}&quot;</h4>
+				<h4>Searched in: title, content, location</h4>
+				<h4>Searched phrase: &quot;{searchPhase}&quot;</h4>
 				{status === 'loading' && (
 					<Spinner animation='border' role='status'>
 						<span className='visually-hidden'>Loading...</span>

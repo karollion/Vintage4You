@@ -12,8 +12,12 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    let adress = '/searchedAd/' + searchPhase;
-    navigate(adress);
+    if(searchPhase !== ''){
+      let adress = '/searchedAd/' + searchPhase;
+      navigate(adress);
+    } else {
+      
+    }
   };
   
   return (
