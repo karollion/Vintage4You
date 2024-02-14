@@ -34,6 +34,7 @@ const NavBar = () => {
         </Navbar>
       </Container>
       <div className={styles.vaves}></div> 
+      <div className={styles.vaves2}></div> 
     </div>
   );
 };

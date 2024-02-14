@@ -1,6 +1,7 @@
 @import '../../../styles/settings.scss';
 
 .root {
+	margin-top: 100px;
 	
 	.box {
 		display: flex;
@@ -89,13 +90,6 @@
 			}
 		}
 	}
-
-	.vaves {
-    width: 100%;
-    height: 100px;
-    background-image: url(../../../../public/images/vaves2.svg);
-    background-size: cover;
-  }
 
 	@media (max-width: 500px){
 		.userInfo {

@@ -36,7 +36,6 @@ const Ad = () => {
   if (!ad) return <Navigate to="/" />;
   return (
     <div className={styles.root}>
-      <div className={styles.vaves}></div> 
       <Container>
         <div className={styles.box}>
           <div className={styles.body}>

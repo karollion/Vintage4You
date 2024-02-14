@@ -33,7 +33,6 @@ const DeleteAd = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.vaves}></div> 
       <Title>Delete Ad</Title>
       <div className={styles.body}>
         <Alert variant='danger'>

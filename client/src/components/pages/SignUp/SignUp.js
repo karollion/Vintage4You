@@ -52,7 +52,6 @@ const SignUp = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.vaves}></div> 
       <Title>SignUp</Title>
       <Form onSubmit={handleSubmit} className={styles.card}> 
 
