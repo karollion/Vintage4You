@@ -10,6 +10,7 @@ import Container from '../../common/container/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row } from 'react-bootstrap';
+import SearchForm from '../../features/SearchForm/SearchForm';
 
 const Ad = () => {
   const user = useSelector(getUser);
@@ -36,6 +37,7 @@ const Ad = () => {
   if (!ad) return <Navigate to="/" />;
   return (
     <div className={styles.root}>
+      <SearchForm />
       <Container>
         <div className={styles.box}>
           <div className={styles.body}>
