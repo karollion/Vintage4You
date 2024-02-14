@@ -40,7 +40,7 @@ const AdForm = ({ action, actionText, ...props }) => {
           {...register("title", { required: true, minLength: 10, maxLength: 50 })}
           value={title}
           onChange={e => setTitle(e.target.value)}
-          type='text' placeholder='Enter title'
+          type='text' placeholder='Enter title (10 to 50 characters)'
         />
         {errors.title && <small className="d-block form-text text-danger mt-2">Title length is incorrect (min is 10, max is 50)</small>}
       </Form.Group>
@@ -49,7 +49,7 @@ const AdForm = ({ action, actionText, ...props }) => {
         <Form.Label>Content</Form.Label>
         <Form.Control 
           {...register("content", { required: true, minLength: 20, maxLength: 1000 })}
-          as="textarea" placeholder="Enter content" rows={3} 
+          as="textarea" placeholder="Enter content (20 to 1000 characters)" rows={3} 
           value={content} 
           onChange={e => setContent(e.target.value)} />
           {errors.content && <small className="d-block form-text text-danger mt-2">Content length is incorrect (min is 20, max is 1000)</small>}

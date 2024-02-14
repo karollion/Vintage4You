@@ -45,7 +45,7 @@
     p {
       margin: 0;
       font-family: $font-text;
-      font-size: calc($base-size * 1.5);
+      font-size: calc($base-size * 1.2);
       font-weight: 900;
     }
   }
@@ -58,11 +58,12 @@
 
     h3 {
       margin-bottom: 14px;
+      font-size: calc($base-size * 1.5);
     }
 
     p {
       margin: 2px;
-      font-size: calc($base-size * 1.5);
+      font-size: calc($base-size * 1.2);
     }
 
     p:last-of-type {
