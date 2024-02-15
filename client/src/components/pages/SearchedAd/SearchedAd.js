@@ -19,7 +19,7 @@ const SearchedAd = () => {
 		const options = {
 			method: 'GET',
 		}
-		fetch(`${API_URL}/ads/search/${searchPhase}`, options)
+		fetch(`${API_URL}/adofs/search/${searchPhase}`, options)
 			.then(res => {
 				if (res.status !== 200) {
 					setStatus('serverError')
@@ -31,14 +31,23 @@ const SearchedAd = () => {
 			.then(ads => setAdsToShow(ads))
 			.catch(() => setStatus('serverError'))
 	}, [searchPhase])
-	if (!adsToShow) return <p>Nothing matches your search....</p>
+	if (!adsToShow) return(
+		<div className={styles.root}>
+			<SearchForm />
+			<Container>
+					<Title>Searched advertisements</Title>
+					<h4>Searched in: title, location</h4>
+					<h4>Searched phrase: &quot;{searchPhase}&quot;</h4>
+					<p>Nothing matches your search....</p>
+				</Container>
+		</div>)
 
 	return (
 		<div className={styles.root}>
 			<SearchForm />
 			<Container>
 				<Title>Searched advertisements</Title>
-				<h4>Searched in: title, content, location</h4>
+				<h4>Searched in: title, location</h4>
 				<h4>Searched phrase: &quot;{searchPhase}&quot;</h4>
 				{status === 'loading' && (
 					<Spinner animation='border' role='status'>

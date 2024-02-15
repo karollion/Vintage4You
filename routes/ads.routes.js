@@ -4,16 +4,16 @@ const authMiddleware = require('../utils/authMiddleware');
 const AdsController = require('../controllers/ads.controller');
 const imageUpload = require('../utils/imageUpload')
 
-router.get('/ads', AdsController.getAll);
+router.get('/adofs', AdsController.getAll);
 
-router.get('/ads/:id', AdsController.getOne);
+router.get('/adofs/:id', AdsController.getOne);
 
-router.post('/ads', authMiddleware, imageUpload.single('picture'), AdsController.postOne);
+router.post('/adofs', authMiddleware, imageUpload.single('picture'), AdsController.postOne);
 
-router.delete('/ads/:id', authMiddleware, AdsController.deleteOne);
+router.delete('/adofs/:id', authMiddleware, AdsController.deleteOne);
 
-router.put('/ads/:id', authMiddleware, imageUpload.single('picture'), AdsController.putOne);
+router.put('/adofs/:id', authMiddleware, imageUpload.single('picture'), AdsController.putOne);
 
-router.get('/ads/search/:searchPhrase', AdsController.searchAll);
+router.get('/adofs/search/:searchPhrase', AdsController.searchAll);
 
 module.exports = router;

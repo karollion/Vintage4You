@@ -21,7 +21,7 @@ export const removeAd = payload => ({type: REMOVE_AD, payload});
 export const fetchAds = () => {
   return(dispatch) => {
     dispatch(setLoading(true))
-    fetch(`${API_URL}/ads`)
+    fetch(`${API_URL}/adofs`)
       .then(res => res.json())
       .then(ads => {
         dispatch(setLoading(false)) 
@@ -45,7 +45,7 @@ export const updateAdRequest = ( ad ) => {
       credentials: 'include',
       body: fd
     };
-    fetch(`${API_URL}/ads/${ad._id}`, options)
+    fetch(`${API_URL}/adofs/${ad._id}`, options)
       //.then(() => {dispatch(updateAd(ad, ad.id))})
       .then(() => {dispatch(fetchAds())})
   };
@@ -69,7 +69,7 @@ export const addAdRequest = ad => {
       body: fd
     };
     
-    fetch(`${API_URL}/ads`, options)
+    fetch(`${API_URL}/adofs`, options)
       .then(() => {dispatch(fetchAds())})
       .catch((err) => console.log(err))
   };
@@ -82,7 +82,7 @@ export const removeAdRequest = id => {
       credentials: 'include',
 		}
 
-		fetch(`${API_URL}/ads/${id}`, options)
+		fetch(`${API_URL}/adofs/${id}`, options)
       .then(() => {dispatch(removeAd(id))})
 	};
 };

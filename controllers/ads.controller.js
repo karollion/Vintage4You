@@ -124,7 +124,6 @@ exports.searchAll = async (req, res) => {
     const searchAds = await Ads.find({
 			$or: [
 				{ title: { $regex: searchPhase, $options: 'i' } },
-				{ content: { $regex: searchPhase, $options: 'i' } },
 				{ location: { $regex: searchPhase, $options: 'i' } },
 			],
 		}).populate('user')
