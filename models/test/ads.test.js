@@ -21,7 +21,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: {},
@@ -30,7 +30,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 99,
@@ -39,7 +39,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
     ];
 
@@ -60,7 +60,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie',
@@ -69,7 +69,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
     ];
 
@@ -90,7 +90,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie używane',
@@ -99,7 +99,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Spodnie używane',
@@ -108,7 +108,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
     ];
 
@@ -129,7 +129,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie używane',
@@ -138,7 +138,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
     ];
 
@@ -159,7 +159,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -168,7 +168,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Rolki używane ale dobre',
@@ -177,7 +177,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
     ];
 
@@ -198,7 +198,7 @@ describe('Ads - model', () => {
         picture: [],
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -207,7 +207,7 @@ describe('Ads - model', () => {
         picture: {},
         price: 90, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Rolki używane ale dobre',
@@ -216,7 +216,7 @@ describe('Ads - model', () => {
         picture: 333,
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
     ];
 
@@ -237,7 +237,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: [], 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -246,7 +246,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: {}, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -255,7 +255,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: '66', 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
     ];
 
@@ -276,7 +276,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: {}, 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -285,7 +285,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: [], 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Rolki używane ale dobre',
@@ -294,7 +294,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 345, 
-        seller: 'Michał'
+        user: 'Michał'
       },
     ];
     
@@ -315,7 +315,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Warszawa', 
-        seller: [],
+        user: [],
       },
       { 
         title: 'Spodnie niebieskie',
@@ -324,7 +324,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 90, 
         location: 'Warszawa', 
-        seller: {},
+        user: {},
       },
       { 
         title: 'Rolki używane ale dobre',
@@ -333,7 +333,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Warszawa', 
-        seller: 333,
+        user: 333,
       },
     ];
     
@@ -354,7 +354,7 @@ describe('Ads - model', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       },
       { 
         title: 'Spodnie niebieskie',
@@ -363,7 +363,7 @@ describe('Ads - model', () => {
         picture: 'spodnie.jpg',
         price: 50, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       },
       { 
         title: 'Dywanikidwa',
@@ -372,7 +372,7 @@ describe('Ads - model', () => {
         picture: 'dywany.jpg',
         price: 150, 
         location: 'Toruń', 
-        seller: 'Orion'
+        user: 'Orion'
       },
     ];
 

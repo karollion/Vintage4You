@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 const request = chai.request;
 
-describe('Ads route test: GET /api/ads', () => {
+describe('Ads route test: GET /api/adofs', () => {
   
   beforeEach(async () => {
 		const testAdsOne = new Ads({ 
@@ -19,7 +19,7 @@ describe('Ads route test: GET /api/ads', () => {
       picture: 'rolki.jpg',
       price: 200, 
       location: 'Gdynia', 
-      seller: 'Michał'
+      user: 'Michał'
     });
 		await testAdsOne.save();
 
@@ -31,13 +31,13 @@ describe('Ads route test: GET /api/ads', () => {
       picture: 'spodnie.jpg',
       price: 50, 
       location: 'Warszawa', 
-      seller: 'Syriusz'
+      user: 'Syriusz'
     });
 		await testAdsTwo.save();
 	});
   
     it('/ should return all Ads', async () => {
-      const res = await request(server).get('/api/ads');
+      const res = await request(server).get('/api/adofs');
       expect(res.status).to.be.equal(200);
       expect(res.body).to.be.an('array');
       expect(res.body.length).to.be.equal(2);
@@ -48,7 +48,7 @@ describe('Ads route test: GET /api/ads', () => {
     });
   
   it('/:id should return one department by :id ', async () => {
-    const res = await request(server).get('/api/ads/5d9f1159f81ce8d1ef2bee48');
+    const res = await request(server).get('/api/adofs/5d9f1159f81ce8d1ef2bee48');
     expect(res.status).to.be.equal(200);
     expect(res.body).to.be.an('object');
     expect(res.body).to.not.be.null;

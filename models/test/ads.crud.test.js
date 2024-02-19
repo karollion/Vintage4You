@@ -23,7 +23,7 @@ describe('Ads - crud', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       });
       await testAdsOne.save();
   
@@ -35,7 +35,7 @@ describe('Ads - crud', () => {
         picture: 'spodnie.jpg',
         price: 50, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       });
       await testAdsTwo.save();
     });
@@ -68,7 +68,7 @@ describe('Ads - crud', () => {
         picture: 'spodnie.jpg',
         price: 50, 
         location: 'Warszawa', 
-        seller: 'Syriusz' });
+        user: 'Syriusz' });
       await ads.save();
       expect(ads.isNew).to.be.false;
     });
@@ -91,7 +91,7 @@ describe('Ads - crud', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       });
       await testAdsOne.save();
   
@@ -103,7 +103,7 @@ describe('Ads - crud', () => {
         picture: 'spodnie.jpg',
         price: 50, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       });
       await testAdsTwo.save();
     });
@@ -153,7 +153,7 @@ describe('Ads - crud', () => {
         picture: 'rolki.jpg',
         price: 200, 
         location: 'Gdynia', 
-        seller: 'Michał'
+        user: 'Michał'
       });
       await testAdsOne.save();
   
@@ -165,7 +165,7 @@ describe('Ads - crud', () => {
         picture: 'spodnie.jpg',
         price: 50, 
         location: 'Warszawa', 
-        seller: 'Syriusz'
+        user: 'Syriusz'
       });
       await testAdsTwo.save();
     });

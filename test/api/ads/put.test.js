@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 const request = chai.request;
 
-describe('Ads route test: PUT /api/ads', () => {
+describe('Ads route test: PUT /api/adofs', () => {
   
   before(async () => {
 		const testAdsOne = new Ads({ 
@@ -19,20 +19,20 @@ describe('Ads route test: PUT /api/ads', () => {
       picture: 'rolki.jpg',
       price: 200, 
       location: 'Gdynia', 
-      seller: 'Michał'
+      user: 'Michał'
     });
 		await testAdsOne.save();
 	});
   
   it('/:id should update chosen document and return success', async () => {
-    const res = await request(server).put('/api/ads/5d9f1140f10a81216cfd4409').send({ 
+    const res = await request(server).put('/api/adofs/5d9f1140f10a81216cfd4409').send({ 
       title: 'Rolki używane ale dobre',
       content: 'Sprzedaje rolki bo mam je na sprzedaż', 
       date: '2020-05-12T23:50:21.817Z', 
       picture: 'rolki.jpg',
       price: 459, 
       location: 'Gdynia', 
-      seller: 'Michał'
+      user: 'Michał'
     });
     const updatedAds = await Ads.findOne({ _id: '5d9f1140f10a81216cfd4409' });
     expect(res.status).to.be.equal(200);

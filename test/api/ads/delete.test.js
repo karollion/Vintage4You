@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 const request = chai.request;
 
-describe('Ads route test: DELETE /api/ads', () => {
+describe('Ads route test: DELETE /api/adofs', () => {
   
   before(async () => {
 		const testAdsOne = new Ads({ 
@@ -19,13 +19,13 @@ describe('Ads route test: DELETE /api/ads', () => {
       picture: 'rolki.jpg',
       price: 200, 
       location: 'Gdynia', 
-      seller: 'Michał'
+      user: 'Michał'
     });
 		await testAdsOne.save();
 	});
   
   it('/:id should delete chosen document and return success', async () => {
-    const res = await request(server).delete('/api/ads/5d9f1140f10a81216cfd4408');
+    const res = await request(server).delete('/api/adofs/5d9f1140f10a81216cfd4408');
     expect(res.status).to.be.equal(200);
     expect(res.body).to.not.be.null;
 
