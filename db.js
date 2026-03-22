@@ -6,8 +6,8 @@ const connectToDB = () => {
 	const user = process.env.DB_USER;
   const NODE_ENV = process.env.NODE_ENV;
   let dbUri = '';
-
-  if(NODE_ENV === 'production') dbUri = `mongodb+srv://${user}:${password}@cluster0.pbd1wk2.mongodb.net/AdsBoardDB?retryWrites=true&w=majority`;
+ 
+  if(NODE_ENV === 'production') dbUri = `mongodb+srv://${user}:${password}@cluster0.pbd1wk2.mongodb.net/?appName=Cluster0`;
   else if(NODE_ENV === 'test') dbUri = 'mongodb://0.0.0.0:27017/AdsBoardDBtest';
   else dbUri = 'mongodb://0.0.0.0:27017/AdsBoardDB';
 
