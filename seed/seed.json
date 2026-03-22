@@ -1,0 +1,254 @@
+{
+"users": [
+{
+"_id": "64f000000000000000000001",
+"login": "pandaUser",
+"password": "$2a$10$abcdefghijklmnopqrstuv",
+"avatar": "panda-1707050674872.png",
+"phone": 123456789
+},
+{
+"_id": "64f000000000000000000002",
+"login": "ringUser",
+"password": "$2a$10$abcdefghijklmnopqrstuv",
+"avatar": "ring.jpg",
+"phone": 987654321
+}
+],
+"ads": [
+{
+"title": "Vintage wooden chair in great condition",
+"content": "Beautiful vintage chair made of solid wood. Perfect for living room or office decor.",
+"date": "2024-01-10T10:00:00.000Z",
+"picture": "chair1.jpg",
+"price": 120,
+"location": "Gdansk",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Classic wooden chair for home interior",
+"content": "Comfortable wooden chair with classic design. Stable and very durable construction.",
+"date": "2024-01-11T10:00:00.000Z",
+"picture": "chair2.jpg",
+"price": 130,
+"location": "Sopot",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Stylish antique chair collectible piece",
+"content": "Antique chair ideal for collectors or stylish interiors. Unique handcrafted details.",
+"date": "2024-01-12T10:00:00.000Z",
+"picture": "chair3.jpg",
+"price": 200,
+"location": "Gdynia",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Elegant chair perfect for dining room",
+"content": "Elegant chair suitable for dining rooms or offices. Comfortable seating experience.",
+"date": "2024-01-13T10:00:00.000Z",
+"picture": "chair4.jpg",
+"price": 150,
+"location": "Warsaw",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Wooden chest storage furniture vintage",
+"content": "Large wooden chest with storage space. Perfect for bedroom or hallway organization.",
+"date": "2024-01-14T10:00:00.000Z",
+"picture": "chest.jpg",
+"price": 300,
+"location": "Poznan",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Retro wall clock decorative accessory",
+"content": "Retro styled wall clock that adds character to any interior decoration.",
+"date": "2024-01-15T10:00:00.000Z",
+"picture": "clock1.jpg",
+"price": 80,
+"location": "Krakow",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Vintage clock fully working condition",
+"content": "Functional vintage clock with precise mechanism and beautiful design.",
+"date": "2024-01-16T10:00:00.000Z",
+"picture": "clock2.jpg",
+"price": 95,
+"location": "Lodz",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Decorative antique clock collectible item",
+"content": "Unique antique clock ideal for collectors and retro interior lovers.",
+"date": "2024-01-17T10:00:00.000Z",
+"picture": "clock3.jpg",
+"price": 110,
+"location": "Wroclaw",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Minimalist modern clock wall decoration",
+"content": "Modern minimalist wall clock perfect for contemporary apartments.",
+"date": "2024-01-18T10:00:00.000Z",
+"picture": "clock4.jpg",
+"price": 70,
+"location": "Katowice",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Industrial coffee grinder vintage style",
+"content": "Old fashioned coffee grinder fully functional and decorative.",
+"date": "2024-01-19T10:00:00.000Z",
+"picture": "grinder.jpg",
+"price": 140,
+"location": "Gdansk",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Elegant hairpin handmade accessory",
+"content": "Handmade decorative hairpin perfect for special occasions.",
+"date": "2024-01-20T10:00:00.000Z",
+"picture": "hairpin.jpg",
+"price": 40,
+"location": "Szczecin",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Vintage hi-fi audio equipment collectible",
+"content": "Classic hi-fi equipment for vintage audio enthusiasts and collectors.",
+"date": "2024-01-21T10:00:00.000Z",
+"picture": "hifi.jpg",
+"price": 500,
+"location": "Bydgoszcz",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Modern smartphone in excellent condition",
+"content": "Smartphone fully operational with great battery life and clean screen.",
+"date": "2024-01-22T10:00:00.000Z",
+"picture": "phone1.jpg",
+"price": 900,
+"location": "Gdansk",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Used smartphone affordable price offer",
+"content": "Good condition smartphone perfect for everyday usage.",
+"date": "2024-01-23T10:00:00.000Z",
+"picture": "phone2.jpg",
+"price": 650,
+"location": "Sopot",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Reliable phone ready for daily work",
+"content": "Reliable smartphone with strong performance and solid build quality.",
+"date": "2024-01-24T10:00:00.000Z",
+"picture": "phone3.jpg",
+"price": 720,
+"location": "Gdynia",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Budget smartphone good starter device",
+"content": "Affordable smartphone suitable for students or backup device.",
+"date": "2024-01-25T10:00:00.000Z",
+"picture": "phone4.jpg",
+"price": 400,
+"location": "Warsaw",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Red elegant dress evening fashion wear",
+"content": "Elegant red dress ideal for parties and evening occasions.",
+"date": "2024-01-26T10:00:00.000Z",
+"picture": "red dress.jpg",
+"price": 180,
+"location": "Krakow",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Wooden dining table solid construction",
+"content": "Large dining table made from solid wood perfect for family meals.",
+"date": "2024-01-27T10:00:00.000Z",
+"picture": "table.jpg",
+"price": 600,
+"location": "Poznan",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Vintage typewriter collector edition",
+"content": "Fully functional vintage typewriter ideal for collectors.",
+"date": "2024-01-28T10:00:00.000Z",
+"picture": "typewriter1.jpg",
+"price": 350,
+"location": "Lodz",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Classic typewriter retro office decor",
+"content": "Retro typewriter adding character to office interiors.",
+"date": "2024-01-29T10:00:00.000Z",
+"picture": "typewriter2.jpg",
+"price": 320,
+"location": "Wroclaw",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Antique typewriter fully operational",
+"content": "Antique typewriter preserved in great working condition.",
+"date": "2024-01-30T10:00:00.000Z",
+"picture": "typewriter3.jpg",
+"price": 380,
+"location": "Katowice",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Retro typewriter collectible machine",
+"content": "Beautiful collectible typewriter with vintage mechanical design.",
+"date": "2024-01-31T10:00:00.000Z",
+"picture": "typewriter4.jpg",
+"price": 360,
+"location": "Gdansk",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Classic violin instrument for musicians",
+"content": "Well maintained violin suitable for beginners and professionals.",
+"date": "2024-02-01T10:00:00.000Z",
+"picture": "violin1.jpg",
+"price": 700,
+"location": "Sopot",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Acoustic violin warm sound quality",
+"content": "High quality violin producing warm and rich sound.",
+"date": "2024-02-02T10:00:00.000Z",
+"picture": "violin2.jpg",
+"price": 820,
+"location": "Gdynia",
+"user": "64f000000000000000000002"
+},
+{
+"title": "Vintage violin collectible musical item",
+"content": "Vintage violin ideal for collectors and music enthusiasts.",
+"date": "2024-02-03T10:00:00.000Z",
+"picture": "violin3.jpg",
+"price": 950,
+"location": "Warsaw",
+"user": "64f000000000000000000001"
+},
+{
+"title": "Professional violin great performance",
+"content": "Professional violin offering excellent tone and craftsmanship.",
+"date": "2024-02-04T10:00:00.000Z",
+"picture": "violin4.jpg",
+"price": 1100,
+"location": "Krakow",
+"user": "64f000000000000000000002"
+}
+]
+}
