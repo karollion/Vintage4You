@@ -69,7 +69,14 @@ const Ad = () => {
             <h3>Seller</h3>
             <div className={styles.userBox}>
               <div className={styles.imgBox}>
-                <img src={IMGS_URL + ad.user.avatar} className={styles.avatar} alt='user avatar'></img> 
+                  <img 
+                    src={IMGS_URL + (ad.user.avatar || 'blankprofile.jpg')} 
+                    className={styles.avatar} 
+                    alt='user avatar'
+                    onError={(e) => {
+                      e.currentTarget.src = IMGS_URL + 'blankprofile.jpg';
+                    }}
+                  /> 
               </div>
               <div className={styles.userInfo}>
                 <h4>{ad.user.login}</h4>
