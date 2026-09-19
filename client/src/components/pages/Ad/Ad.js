@@ -48,6 +48,7 @@ const Ad = () => {
     ? (typeof ad.date === 'string' ? ad.date.substring(0, 10) : new Date(ad.date).toISOString().substring(0, 10))
     : '';
 
+  console.log(ad)
   return (
     <div className={styles.root}>
       <SearchForm />
