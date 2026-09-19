@@ -4,7 +4,7 @@
 
 Fullstack application with advertisements for selling vintage items.
 Includes a user registration and login system.
-Users who are not logged in can view all advertisements. Only logged-in users can edit or delete their advertisements
+Users who are not logged in can view all advertisements. Only logged-in users can edit or delete their advertisements.
 
 Project page: [Vintage4You](https://vintage4you.replit.app/)
 

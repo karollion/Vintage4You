@@ -78,6 +78,6 @@ exports.getUser = async (req, res) => {
 };
 
 exports.logout = async (req, res) => {
-  req.session.destroy;
+  req.session.destroy();
   res.send({ message: 'You are logout' });
 };
