@@ -28,3 +28,10 @@ $mongodb://0.0.0.0:27017/AdsBoardDB`
 #Roads to collections: 
 $ /ads /auth
 ```
+
+## Environment variables
+
+DB_SESSIONSECRET = xyz123
+DB_PASSWORD = xxx
+DB_USER = xxx
+NODE_ENV = production
