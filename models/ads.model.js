@@ -8,7 +8,7 @@ const adsSchema = new mongoose.Schema({
   picture: { type: String, required: true },
   price: { type: Number, required: true },
   location: { type: String, required: true },
-  user: { type: String, required: true, ref: 'User'  }
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
 // Create and export model for data in ads colection
