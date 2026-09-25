@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.4c13c82c.css",
-    "main.js": "/static/js/main.4260c2b7.js",
+    "main.js": "/static/js/main.712100c3.js",
     "static/media/vaves.svg": "/static/media/vaves.085ad04df794a86a4d97.svg",
     "static/media/vaves2.svg": "/static/media/vaves2.0fd6783faa58eff46663.svg",
     "static/media/vaves3.svg": "/static/media/vaves3.022a3c1191e4fa98b033.svg",
     "index.html": "/index.html",
     "main.4c13c82c.css.map": "/static/css/main.4c13c82c.css.map",
-    "main.4260c2b7.js.map": "/static/js/main.4260c2b7.js.map"
+    "main.712100c3.js.map": "/static/js/main.712100c3.js.map"
   },
   "entrypoints": [
     "static/css/main.4c13c82c.css",
-    "static/js/main.4260c2b7.js"
+    "static/js/main.712100c3.js"
   ]
 }

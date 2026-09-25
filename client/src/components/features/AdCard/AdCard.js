@@ -17,8 +17,16 @@ const AdCard = ({ ad }) => {
     <Col xs='12' sm='6' md='4' lg='3' className='mb-4'>
       <div className={styles.card}>
         <div className={styles.price}><p>{ad.price}$</p></div>
-        <img variant='top' alt='ad_image' src={IMGS_URL + ad.picture} className={styles.img} />
-			  <div className={styles.body}>
+			  <img 
+          src={IMGS_URL + (ad.picture || 'no-image.png')} 
+          className={styles.img} 
+          alt={ad.title + 'Product image'}
+          variant='top'
+          onError={(e) => {
+            e.currentTarget.src = IMGS_URL + 'no-image.png';
+          }}
+        /> 
+        <div className={styles.body}>
           <h3>{ad.title}</h3>
           <p>Location: {ad.location}</p>
           <p>Date added: {ad.date.substring(0, 10)}</p>
